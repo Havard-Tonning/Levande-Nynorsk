@@ -24,7 +24,8 @@ public class Main {
 
 //        Train.generateTranslation(couples2);
 
-        new Translate("This is a test, but it does not have to be");
+        new Translate("Jeg er en flaggbærer. Det er en grunnløs anklagelse. ");
+
 
     }
 }

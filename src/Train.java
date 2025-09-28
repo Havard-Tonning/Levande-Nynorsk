@@ -268,5 +268,20 @@ public class Train {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        AppendBannedWords();
+    }
+
+    public static void AppendBannedWords(){
+        try (FileWriter writer = new FileWriter("src/translation.csv", true)) {
+            String[] aWords = {"jeg", "også", "hun", "ham", "ikke", "de", "dere", "fra", "da", "en", "et"};
+            String[] bWords = {"eg", "òg", "ho", "han", "ikkje", "dei", "dykk", "frå", "då", "ein", "eit"};
+
+            for(int i = 0; i < aWords.length; i++){
+                writer.append(aWords[i] + "," + bWords[i] + ",1\n");
+            }
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

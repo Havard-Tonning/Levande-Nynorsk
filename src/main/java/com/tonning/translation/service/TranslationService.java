@@ -1,5 +1,8 @@
+package com.tonning.translation.service;
+
+import org.springframework.stereotype.Service;
+
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
@@ -8,8 +11,11 @@ import java.util.HashSet;
 import static java.lang.Character.isUpperCase;
 import static java.lang.Character.toUpperCase;
 
-public class Translate {
-    public Translate(String input) {
+@Service
+public class TranslationService {
+
+
+    public static String Translate(String input) {
         HashSet<String> names = ReadNames();
         String translatedSentence = "";
         String currentWord = "";
@@ -21,7 +27,7 @@ public class Translate {
         int wordIndex = 0;
         for (String word : inputArray) {
             boolean capital = false;
-            if(isUpperCase(word.charAt(0))){
+            if (isUpperCase(word.charAt(0))) {
                 capital = true;
             }
             currentWord = translations.getOrDefault(word.toLowerCase(), word); // If there is a match, it will be translated. If not, it will stay the same.
@@ -32,21 +38,20 @@ public class Translate {
             and will be passed to the cleaner for that case.
 
              */
-            if(currentWord.charAt(currentWord.length()-1) == 's'){
-                if(names.contains(currentWord.substring(0,currentWord.length()-2))){
-                    RemovePossessive(currentWord, inputArray, wordIndex);
-                }
-            }
+//                if (currentWord.charAt(currentWord.length() - 1) == 's') {
+//                    if (names.contains(currentWord.substring(0, currentWord.length() - 2))) {
+//                        RemovePossessive(currentWord, inputArray, wordIndex); // ************************************
+//                    }
+//                }
 
-            if(capital){
+            if (capital) {
                 currentWord = toUpperCase(currentWord.charAt(0)) + currentWord.substring(1);
             }
             translatedSentence += currentWord;
             wordIndex++;
         }
-        System.out.println(translatedSentence);
+        return translatedSentence;
     }
-
 
 
     public static HashSet<String> ReadNames() {
@@ -95,7 +100,7 @@ public class Translate {
     }
 
     private void RemovePossessive(String currentWord, String[] inputArray, int wordIndex) {
-        currentWord = currentWord.substring(0,currentWord.length()-2); // Remove the possessive
+        currentWord = currentWord.substring(0, currentWord.length() - 2); // Remove the possessive
 
         /*
             Pseudocode:
@@ -105,4 +110,5 @@ public class Translate {
 
          */
     }
+
 }

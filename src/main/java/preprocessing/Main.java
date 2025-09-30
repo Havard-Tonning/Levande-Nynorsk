@@ -1,3 +1,5 @@
+package preprocessing;
+
 import java.util.ArrayList;
 
 public class Main {
@@ -24,7 +26,7 @@ public class Main {
 
 //        Train.generateTranslation(couples2);
 
-        new Translate("Jeg er en flaggbærer. Det er en grunnløs anklagelse. ");
+       // System.out.println(TranslationService.Translate("Jeg er en flaggbærer. Det er en grunnløs anklagelse. "));
 
 
     }

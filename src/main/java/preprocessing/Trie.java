@@ -1,3 +1,5 @@
+package preprocessing;
+
 public class Trie {
     private static final int LETTERS = 29;
 

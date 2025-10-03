@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import static java.lang.Math.min;
@@ -58,7 +59,7 @@ public class Train {
                 }
             }
 
-            // If it's not within quotes, all is good and it gets returned and written to the array
+            // If it's not within quotes, all is good, and it gets returned and written to the array
             if (!inQuotes) {
                 return line.toString();
             }
@@ -235,7 +236,7 @@ public class Train {
         // Creating an arraylist of arrays. It will have the columns aWord, translation and probability
         ArrayList<String[]> translatedWords = new ArrayList<String[]>();
 
-        try (FileWriter writer = new FileWriter("src/translation.csv", false)) {
+        try (FileWriter writer = new FileWriter("src/main/java/preprocessing/translation.csv", false)) {
 
             outerMap.forEach((aWord, matches) -> {
                 // Since lambda functions need effectively final data types, we get around this by using atomic integers and single element strings.
@@ -251,10 +252,12 @@ public class Train {
                 });
 
                 if (bestTranslation[0] != "" && appearanceMap.get(aWord) != null) {
-                    // If the left word appears more than once in the text, and the co-occurrence probability is more than 0,5
+                    /*
+                    If the left word appears more than once in the text, and the co-occurrence probability is more than 0,5
+                    Also prunes out words that are the same in both languages
+                     */
                     double probability = (double) outerMap.get(aWord).get(bestTranslation[0]) / appearanceMap.get(aWord);
-                    if (appearanceMap.get(aWord) > 4 && probability > 0.5) {
-
+                    if (appearanceMap.get(aWord) > 4 && probability > 0.5 && !Objects.equals(aWord, bestTranslation[0])) {
                         try {
                             writer.append(aWord + "," + bestTranslation[0] + "," + probability + "\n");
                         } catch (IOException e) {
@@ -274,7 +277,7 @@ public class Train {
     }
 
     public static void AppendBannedWords(){
-        try (FileWriter writer = new FileWriter("src/translation.csv", true)) {
+        try (FileWriter writer = new FileWriter("src/main/java/preprocessing/translation.csv", true)) {
             String[] aWords = {"jeg", "også", "hun", "ham", "ikke", "de", "dere", "fra", "da", "en", "et", "hvor"};
             String[] bWords = {"eg", "òg", "ho", "han", "ikkje", "dei", "dykk", "frå", "då", "ein", "eit", "kor"};
 

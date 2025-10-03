@@ -3,6 +3,12 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
+# Large files to exclude
+src/main/java/preprocessing/wordList.csv
+src/main/java/preprocessing/pairs.csv
+src/main/java/preprocessing/names.txt
+src/main/java/preprocessing/npk_2011_2022.tsv
+
 ### Eclipse ###
 .apt_generated
 .classpath

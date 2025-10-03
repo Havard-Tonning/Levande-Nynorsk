@@ -27,8 +27,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-    </dependencies>
 
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20231013</version>
+        </dependency>
+    </dependencies>
     <build>
         <plugins>
             <plugin>
@@ -46,4 +51,6 @@
             </plugin>
         </plugins>
     </build>
+
+
 </project>

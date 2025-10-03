@@ -9,6 +9,5 @@ FROM eclipse-temurin:20-jre-alpine
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 COPY src/translation.csv src/translation.csv
-COPY src/main/java/preprocessing/names.txt src/names.txt
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]

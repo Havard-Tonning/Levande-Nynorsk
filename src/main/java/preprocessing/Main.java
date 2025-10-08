@@ -13,14 +13,12 @@ public class Main {
 //        ArrayList<String[]> couples = Train.ReadCSV("pairs.csv");
 //        System.out.println("Loaded " + couples.size() + " pairs from CSV");
 //
-        ArrayList<String[]> couples2 = Train.ReadTSV("src/main/java/preprocessing/npk_2011_2022.tsv");
-        System.out.println("Loaded " + couples2.size() + " pairs from TSV");
+//        ArrayList<String[]> couples2 = Train.ReadTSV("src/main/java/preprocessing/npk_2011_2022.tsv");
+//        System.out.println("Loaded " + couples2.size() + " pairs from TSV");
+//
+//        Train.generateTranslation(couples2);
 
-        Train.generateTranslation(couples2);
-
-       // System.out.println(TranslationService.Translate("Jeg er en flaggbærer. Det er en grunnløs anklagelse. "));
-
-//        CreateDict.GetArticleNum("Gikk");
+        new CreateDict();
 
 //     new CreateDict();
     }

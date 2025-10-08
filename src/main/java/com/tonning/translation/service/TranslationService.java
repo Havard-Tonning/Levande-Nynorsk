@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Objects;
 
 import static java.lang.Character.isUpperCase;
 import static java.lang.Character.toUpperCase;
@@ -17,6 +18,7 @@ public class TranslationService {
 
     public static String Translate(String input) {
         HashSet<String> names = ReadNames();
+        HashMap<String, String[]> wordList = ReadDict();
         String translatedSentence = "";
         String currentWord = "";
 
@@ -26,30 +28,39 @@ public class TranslationService {
 
         int wordIndex = 0;
         for (String word : inputArray) {
+
+            // If it ends in an s, it might be a possessive. To find out, we need to check if it is still a word (or name) when the s is removed
+            if (word.charAt(word.length() - 1) == 's' && word.length() >= 2) {
+                String unpossessiveWord = word.substring(0,word.length() - 1);
+                if (names.contains(unpossessiveWord) || wordList.containsKey(unpossessiveWord)) {
+                    word = RemovePossessive(unpossessiveWord, inputArray, wordIndex, wordList);
+                }
+            }
+
+            // Min/mi/mitt (my) in Bokmål comes before the noun, in Nynorsk, it comes after, and the noun changes to the lemma form
+
+            if(Objects.equals(word, "min") || Objects.equals(word, "mi") || Objects.equals(word, "mitt")){
+                DelayPossessive(word, wordIndex, inputArray, wordList);
+            }
+
+            wordIndex++;
+        }
+        for(String word : inputArray){
             boolean capital = false;
             if (isUpperCase(word.charAt(0))) {
                 capital = true;
             }
+
             currentWord = translations.getOrDefault(word.toLowerCase(), word); // If there is a match, it will be translated. If not, it will stay the same.
-
-            /*
-            If the current word ends in an s, it might be a possessive s. In that case,
-            I check if the thing before the s exists in the name hashset. If it does, it is, in fact a name with a possessive s,
-            and will be passed to the cleaner for that case.
-
-             */
-//                if (currentWord.charAt(currentWord.length() - 1) == 's') {
-//                    if (names.contains(currentWord.substring(0, currentWord.length() - 2))) {
-//                        RemovePossessive(currentWord, inputArray, wordIndex); // ************************************
-//                    }
-//                }
 
             if (capital) {
                 currentWord = toUpperCase(currentWord.charAt(0)) + currentWord.substring(1);
             }
+
             translatedSentence += currentWord;
-            wordIndex++;
+
         }
+
         return translatedSentence;
     }
 
@@ -58,7 +69,7 @@ public class TranslationService {
         HashSet<String> names = new HashSet<String>();
 
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("src/names.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/main/java/preprocessing/names.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 if (line.trim().isEmpty()) {
@@ -77,6 +88,27 @@ public class TranslationService {
             System.err.println("Error reading file: " + e.getMessage());
         }
         return names;
+    }
+
+    public static HashMap<String, String[]> ReadDict(){
+        HashMap<String, String[]> wordList = new HashMap<>();
+
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/main/java/preprocessing/wordList.csv"))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (line.trim().isEmpty()) {
+                    continue;
+                }
+
+                String[] words = line.trim().split(",");
+
+                // Technically this means that the first word will be duplicated, but I will do it like this for simplicity
+                wordList.put(words[0],words);
+            }
+        } catch (IOException e) {
+            System.err.println("Error reading file: " + e.getMessage());
+        }
+        return wordList;
     }
 
     public static HashMap<String, String> ReadTranslations() {
@@ -99,16 +131,78 @@ public class TranslationService {
         return translations;
     }
 
-    private void RemovePossessive(String currentWord, String[] inputArray, int wordIndex) {
-        currentWord = currentWord.substring(0, currentWord.length() - 2); // Remove the possessive
 
-        /*
-            Pseudocode:
-            Send inputArray[wordIndex]+1 to the API. If it is a noun, it will take the gender and get sin/si/sitt/sine
-            If it is not (for example Håvards store katter, go to the next word and do the same.
+    /*
+    Bokmål allows for possessive s. This is not legal in Nynorsk. Here, you have to use a separate possessive pronoun.
+    The form of this word depends on the gender of the object it is referencing. In this function, we add the possessive
+    based on the gender of the first following noun.
+     */
+    private static String RemovePossessive(String currentWord, String[] inputArray, int wordIndex, HashMap<String, String[]> wordList) {
+        String nextWord = "";
+        String gender = "na";
 
-
-         */
+        for(int n = wordIndex + 1 ; n < inputArray.length; n++){
+            nextWord = inputArray[n];
+            if(wordList.containsKey(nextWord)) {
+                if (!Objects.equals(wordList.get(nextWord)[3], "na")) {
+                    gender = wordList.get(nextWord)[3];
+                    break;
+                }
+            }
+        }
+        if(Objects.equals(gender, "Masc")){
+            return currentWord + " sin";
+        }
+        else if(Objects.equals(gender, "Fem")){
+            return currentWord + " si";
+        }
+        else if(Objects.equals(gender, "Neuter")){
+            return currentWord + " sitt";
+        }
+        // If the sentence is incomplete and has no noun after the possessive, we ignore it and move on.
+        else{
+            return currentWord;
+        }
     }
 
+
+    private static void DelayPossessive(String word, int wordIndex, String[] inputArray, HashMap<String, String[]> wordList){
+        String noun = "";
+        String lemma = "";
+
+        if(wordIndex >= 1) {
+            noun = inputArray[wordIndex - 1];
+        }
+        else{
+            return;
+        }
+        String gender = "";
+
+        // For delayed possessives, the noun goes to the lemma form
+        if(wordList.containsKey(noun)){
+
+            // Double-checking that the word preceding the possessive is a noun
+            if(!Objects.equals(wordList.get(noun)[2], "NOUN")){
+                return;
+            }
+
+            lemma = wordList.get(noun)[1];
+            gender = wordList.get(noun)[3];
+
+            // Bokmål has a collapsed feminine and masculine possessive pronoun. Nynorsk does not
+            if(Objects.equals(word, "min") && Objects.equals(gender, "Fem")){
+                word = "mi";
+            }
+
+            // The delay of the possessive does not happen if the word preceding the noun is an adjective
+            if(wordIndex >= 2 && wordList.containsKey(inputArray[wordIndex - 2])){
+                if(Objects.equals(wordList.get(inputArray[wordIndex - 2])[2], "ADJ")){
+                    return;
+                }
+            }
+
+            inputArray[wordIndex] = lemma;
+            inputArray[wordIndex - 1] = word;
+        }
+    }
 }

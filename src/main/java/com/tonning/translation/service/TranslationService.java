@@ -116,7 +116,7 @@ public class TranslationService {
     public static HashMap<String, String> ReadTranslations() {
         HashMap<String, String> translations = new HashMap<>();
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("src/translation.csv"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/main/java/preprocessing/translation.csv"))) {
             String line;
 
             while ((line = reader.readLine()) != null) {

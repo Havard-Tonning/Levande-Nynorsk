@@ -1,5 +1,7 @@
 package preprocessing;
 
+import com.tonning.translation.service.TranslationService;
+
 import java.util.ArrayList;
 
 public class Main {
@@ -18,7 +20,8 @@ public class Main {
 //
 //        Train.generateTranslation(couples2);
 
-        new CreateDict();
+        System.out.println(TranslationService.Translate("Håvards beste burger."));
+
 
 //     new CreateDict();
     }

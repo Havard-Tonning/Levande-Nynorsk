@@ -6,10 +6,6 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-//
-//        System.out.println(trie.search("Aasta"));
-//        System.out.println(trie.search("Haavard"));
-
 //         InputToCSV csvReader = new InputToCSV();
 
 //        ArrayList<String[]> couples = Train.ReadCSV("pairs.csv");

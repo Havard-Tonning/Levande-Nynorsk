@@ -8,6 +8,8 @@ RUN mvn clean package -DskipTests
 FROM eclipse-temurin:20-jre-alpine
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
-COPY src/translation.csv src/translation.csv
+COPY src/main/java/preprocessing/translation.csv src/main/java/preprocessing/translation.csv
+COPY src/main/java/preprocessing/dictionary.csv src/main/java/preprocessing/dictionary.csv
+COPY src/main/java/preprocessing/names.txt src/main/java/preprocessing/names.txt
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]

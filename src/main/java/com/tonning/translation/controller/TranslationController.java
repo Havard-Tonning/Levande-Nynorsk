@@ -7,6 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+/*
+    The api endpoint at /api/translate. Receives a JSON request with text to translate.
+    Calls the translationService that returns the translated text. The text is then returned as a response object
+ */
 @RestController
 @CrossOrigin(origins = "*") // Allow CORS
 @RequestMapping("/api/translate")

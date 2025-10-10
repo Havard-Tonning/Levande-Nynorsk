@@ -6,8 +6,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-//         InputToCSV csvReader = new InputToCSV();
-
+//        InputToCSV csvReader = new InputToCSV();
 //        ArrayList<String[]> couples = Train.ReadCSV("pairs.csv");
 //        System.out.println("Loaded " + couples.size() + " pairs from CSV");
 //
@@ -16,7 +15,7 @@ public class Main {
 //
 //        Train.generateTranslation(couples2);
 
-        System.out.println(TranslationService.Translate("Håvards beste burger."));
+        System.out.println(TranslationService.Translate("Han er oss."));
 
 
 //     new CreateDict();

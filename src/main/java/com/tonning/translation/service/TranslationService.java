@@ -34,7 +34,9 @@ public class TranslationService {
             // If it ends in an s, it might be a possessive. To find out, we need to check if it is still a word (or name) when the s is removed
             if (word.charAt(word.length() - 1) == 's' && word.length() >= 2) {
                 String unpossessiveWord = word.substring(0,word.length() - 1);
-                if (names.contains(unpossessiveWord) || wordList.containsKey(unpossessiveWord)) {
+
+                // We also need to check that the word is a noun, because some verbs get s-endings
+                if (names.contains(unpossessiveWord) || (wordList.containsKey(unpossessiveWord) && Objects.equals(wordList.get(unpossessiveWord)[2], "NOUN") && !word.equals("oss"))) {
                     word = RemovePossessive(unpossessiveWord, inputArray, wordIndex, wordList, translations);
                     inputArray[wordIndex] = word;
                 }

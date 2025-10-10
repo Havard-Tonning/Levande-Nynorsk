@@ -1,5 +1,7 @@
 package com.tonning.translation.dto;
 
+// Java object to deserialise the request JSON
+
 public class TranslationRequest {
     private String text;
 

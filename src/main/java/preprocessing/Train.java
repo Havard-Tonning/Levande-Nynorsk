@@ -9,8 +9,6 @@ import java.util.HashMap;
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static java.lang.Math.min;
-
 public class Train {
     public static ArrayList<String[]> ReadCSV(String filePath) {
         ArrayList<String[]> pairs = new ArrayList<>();
@@ -159,10 +157,20 @@ public class Train {
         bannedWords.add("då");
         bannedWords.add("ein");
         bannedWords.add("sa");
+        bannedWords.add("vart");
+        bannedWords.add("ei");
+        bannedWords.add("om");
+        bannedWords.add("blir");
+        bannedWords.add("at");
+        bannedWords.add("kjem");
+        bannedWords.add("eit");
 
-        String textHolder = "";
+
+            String textHolder = "";
         String[] sentenceA = {};
         String[] sentenceB = {};
+
+        int tempCounter = 0; //*****
 
         // Process all couples in the ArrayList
         for (int i = 0; i < couples.size(); i++) {
@@ -203,6 +211,8 @@ public class Train {
                     if (bannedWords.contains(sentenceB[k])) {
                         continue;
                     }
+                    tempCounter++; // ******
+                    System.out.println(tempCounter); ///*******
                     // If the aWord does not already exist as a key in the outer map, create a mapping with aWord, bWord and 1
                     if (!outerMap.containsKey(sentenceA[j]) && !addedWords.contains(sentenceB[k])) {
                         HashMap<String, Integer> innerMap = new HashMap<>();
@@ -278,8 +288,8 @@ public class Train {
 
     public static void AppendBannedWords(){
         try (FileWriter writer = new FileWriter("src/main/java/preprocessing/translation.csv", true)) {
-            String[] aWords = {"jeg", "også", "hun", "ham", "ikke", "de", "dere", "fra", "da", "en", "et", "hvor", "noen", "man", "dem"};
-            String[] bWords = {"eg", "òg", "ho", "han", "ikkje", "dei", "dykk", "frå", "då", "ein", "eit", "kor", "nokon", "ein", "dei"};
+            String[] aWords = {"jeg", "også", "hun", "ham", "ikke", "de", "dere", "fra", "da", "en", "et", "hvor", "noen", "man", "dem", "kommer"};
+            String[] bWords = {"eg", "òg", "ho", "han", "ikkje", "dei", "dykk", "frå", "då", "ein", "eit", "kor", "nokon", "ein", "dei", "kjem"};
 
             for(int i = 0; i < aWords.length; i++){
                 writer.append(aWords[i] + "," + bWords[i] + ",1\n");

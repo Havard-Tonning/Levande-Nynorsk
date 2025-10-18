@@ -53,7 +53,7 @@ albanere,albanarar,1.0
 målgivende,målgivande,0.9375
 floyd-saken,floyd-saka,1.0
 gisken,armand,0.6666666666666666
-sjusifret,eit,1.0
+sjusifret,sjusifra,1.0
 småpakker,småpakkar,0.875
 filmer,filmar,0.9425287356321839
 filmes,filma,0.7142857142857143
@@ -162,7 +162,6 @@ leeds-spiller,leeds-spelar,1.0
 fora,forum,0.7368421052631579
 ed,eid,0.7653631284916201
 egenproduksjon,eigenproduksjon,1.0
-et,eit,0.9352341865572236
 opprørsleder,opprørsleiar,1.0
 toppstillinger,toppstillingar,1.0
 ankelbruddet,ankelbrotet,1.0
@@ -215,6 +214,7 @@ omsorgstjenesten,omsorgstenesta,0.9746835443037974
 treningene,treningane,1.0
 selvmordsbomberne,sjølvmordsbombarane,0.9333333333333333
 omsorgstjenester,omsorgstenester,0.953125
+traktoropptog,mellom,1.0
 c-plattformen,c-plattforma,1.0
 kyllinger,kyllingar,0.9459459459459459
 flomkatastrofen,flaumkatastrofen,0.8888888888888888
@@ -429,7 +429,6 @@ bostedsadresse,bustadadresse,0.8518518518518519
 dugnadstimer,dugnadstimar,0.9
 regionkontorene,regionkontora,1.0
 paust,anne,1.0
-retningsskifte,eit,1.0
 troen,trua,0.9823788546255506
 strømmetjenesten,strøymetenesta,0.9473684210526315
 strømmetjenester,strøymetenester,0.9298245614035088
@@ -586,7 +585,6 @@ bryllupsfesten,bryllaupsfesten,1.0
 utilsiktede,utilsikta,1.0
 befolkningsframskrivninger,ifølgje,0.8571428571428571
 verdensmesterskap,verdsmeisterskap,0.6666666666666666
-innbrakt,inn,0.6111111111111112
 folkehelseundersøkelsen,folkehelseundersøkinga,1.0
 symptomer,symptom,0.9862869198312236
 østerrikeren,austerrikaren,0.987012987012987
@@ -896,7 +894,7 @@ vannskadene,vasskadane,0.75
 rydder,ryddar,0.9615384615384616
 ryddes,opp,0.7368421052631579
 ryddet,rydda,0.9736842105263158
-brohode,eit,1.0
+brohode,migrantar,0.8571428571428571
 vedlikeholder,held,0.6666666666666666
 vedlikeholdes,ved,0.75
 vedlikeholdet,vedlikehaldet,1.0
@@ -1077,7 +1075,7 @@ flyter,flyt,0.9830508474576272
 forsvarsbudsjettene,forsvarsbudsjetta,1.0
 eksempler,døme,0.7387640449438202
 kulturminneforskning,institutt,1.0
-synkehull,eit,0.6
+synkehull,fleire,0.6
 eøs-reglene,eøs-reglane,0.9852941176470589
 eksemplet,dømet,1.0
 visumrestriksjoner,visumrestriksjonar,1.0
@@ -1103,7 +1101,7 @@ stempler,stemplar,1.0
 stemples,stempla,0.6666666666666666
 stemplet,stempla,0.9680851063829787
 ettertraktet,ettertrakta,0.9019607843137255
-høringsnotat,eit,0.72
+høringsnotat,høyringsnotat,0.72
 frp-politikerne,frp-politikarane,1.0
 snømengden,snømengda,1.0
 dueller,duellar,0.918918918918919
@@ -1159,7 +1157,7 @@ noah-leder,siri,1.0
 omsorgsarbeiderne,omsorgsarbeidarane,1.0
 tilregnelige,tilreknelege,1.0
 sportsbutikker,sportsbutikkar,1.0
-begravde,eit,0.8
+begravde,fleire,0.8
 raidet,raida,0.7058823529411765
 misdannelser,misdanningar,1.0
 verdenstoer,verdstoar,0.9090909090909091
@@ -1343,7 +1341,7 @@ rektorer,rektorar,0.90625
 turistdestinasjoner,turistdestinasjonar,0.9
 articles,instant,1.0
 politisjefer,politisjefar,0.8333333333333334
-verret,eit,0.8333333333333334
+verret,intervju,0.6666666666666666
 eiendomsverdi,eiendom,0.9090909090909091
 holdbart,haldbart,0.84
 høydeskrekk,høgdeskrekk,1.0
@@ -1458,7 +1456,7 @@ tokmac,nguen,1.0
 innkjøpsavtaler,innkjøpsavtalar,0.875
 tallfestet,talfesta,0.9285714285714286
 spørreundersøkelse,spørjeundersøking,0.9352226720647774
-forskerteam,eit,0.8666666666666667
+forskerteam,forskarteam,0.8666666666666667
 svømmetrening,symjetrening,0.9
 strålene,strålane,1.0
 stortingsvalgene,stortingsvala,1.0
@@ -1689,7 +1687,6 @@ helgelandssykehuset,helgelandssjukehuset,0.5909090909090909
 voldssak,valdssak,1.0
 gnir,hendene,0.8
 elsykler,elsyklar,0.9827586206896551
-sikkerhetshull,eit,0.5833333333333334
 skrøpelighet,skrøpelege,1.0
 snittmålingene,snittmålingane,1.0
 ubesatte,stillingar,0.7142857142857143
@@ -1836,7 +1833,6 @@ lyon-spilleren,lyon-spelaren,1.0
 fremtidsrettede,framtidsretta,1.0
 stressede,stressa,0.8181818181818182
 fritidsmarkedet,fritidsmarknaden,1.0
-journalsystem,eit,1.0
 bombegruppen,bombegruppa,1.0
 småkommunene,småkommunane,1.0
 koronarekorder,koronarekordar,1.0
@@ -2334,7 +2330,6 @@ spillereglene,spelereglane,0.9210526315789473
 børsuken,børsveka,0.9
 miljøagentene,miljøagentane,0.6666666666666666
 russerne,russarane,0.9781021897810219
-forbruksmønster,eit,0.6
 eu-midler,eu-midlar,0.6363636363636364
 dagligvaremarkedet,daglegvaremarknaden,0.9361702127659575
 turoperatørene,turoperatørane,1.0
@@ -2867,11 +2862,11 @@ kollegene,kollegaene,0.9482758620689655
 hett,heitt,0.8852459016393442
 hete,heite,0.782608695652174
 isbreene,isbreane,1.0
-snevres,inn,0.8
+snevres,meir,0.8
 snevret,snevra,1.0
 hevn,hemn,0.9705882352941176
 ytterste,ytste,0.7280701754385965
-hovedargument,eit,0.625
+hovedargument,hovudargument,0.625
 ankebehandlingen,ankebehandlinga,0.925
 rettsregler,rettsreglar,1.0
 ol-boblen,ol-bobla,0.875
@@ -3055,7 +3050,6 @@ analytikernes,analytikarane,0.8888888888888888
 inndrar,inndreg,0.5714285714285714
 konsesjonsbehandlingen,konsesjonsbehandlinga,1.0
 gjøa-plattformen,gjøa-plattforma,1.0
-overgangslån,eit,1.0
 hjemmepublikummet,heimepublikummet,1.0
 skjermer,skjermar,0.9491525423728814
 skjermes,skjermast,0.5625
@@ -3097,16 +3091,13 @@ tildelingen,tildelinga,0.966804979253112
 tildelinger,tildelingar,0.8723404255319149
 idrettstoppene,idrettstoppane,1.0
 spesialhelsetjenesten,spesialhelsetenesta,1.0
-forvaltningsorgan,eit,0.8888888888888888
 deltatt,delteke,0.6546546546546547
 suv-ene,suv-ane,1.0
 transportmuligheter,transportmoglegheiter,1.0
 undervannsfarkost,fjernstyrt,1.0
 krasjer,krasjar,0.9642857142857143
-verdidokument,eit,1.0
 krasjet,krasja,0.9797979797979798
 datamaskinen,datamaskina,1.0
-kategoriserte,stigningar,0.8571428571428571
 ferjestrekninger,ferjestrekningar,1.0
 budsjettunderskudd,budsjettunderskot,1.0
 stormer,stormar,0.9838709677419355
@@ -3590,7 +3581,7 @@ svakhet,svakheit,0.5967741935483871
 hackerne,hackarane,0.9857142857142858
 lønnsomheten,lønnsemda,0.6890756302521008
 virkningene,verknadene,0.9058823529411765
-engines-saken,engines-saka,1.0
+engines-saken,bergen,1.0
 undersiden,undersida,1.0
 butikkjeden,butikkjeda,0.9615384615384616
 bærbare,berbare,0.8275862068965517
@@ -4000,7 +3991,6 @@ tvinger,tvingar,0.9210526315789473
 tvinges,tvinga,0.6024096385542169
 erkjennelsen,erkjenninga,0.6666666666666666
 enkeltelementer,enkeltelement,0.8
-partssamarbeid,eit,1.0
 nho-leder,nho-leiar,0.9
 næringslivstopper,næringslivstoppar,0.8
 akito,watabe,1.0
@@ -4017,7 +4007,6 @@ tegner,teiknar,0.9512195121951219
 tegnet,teikna,0.88
 tegnes,teikna,0.7916666666666666
 beredskapshensyn,beredskapsomsyn,1.0
-tastetrykk,eit,1.0
 ntb-hans-olav,npk-ntb,0.5714285714285714
 avvisende,avvisande,1.0
 konverteres,konverterast,0.6
@@ -4086,7 +4075,7 @@ høydepunkt,høgdepunkt,0.6825396825396826
 masseprotester,masseprotestar,1.0
 punge,ut,0.9615384615384616
 sykdomssmitte,sjukdomssmitte,0.6666666666666666
-aldersvennlig,eit,0.8
+aldersvennlig,aldersvennleg,0.8
 skolepolitisk,skulepolitisk,0.8888888888888888
 intensivplasser,intensivplassar,1.0
 sammenslutning,samanslutning,0.6190476190476191
@@ -4156,7 +4145,6 @@ sørafrikanere,sørafrikanarar,0.9285714285714286
 isbjørner,isbjørnar,0.9545454545454546
 fysikere,fysikarar,1.0
 turistene,turistane,0.972027972027972
-kontrollregime,eit,1.0
 fastholder,fast,0.8508771929824561
 svanen,svana,1.0
 bevilling,løyve,0.7142857142857143
@@ -4208,7 +4196,6 @@ dvd-er,dvd-ar,1.0
 folkesykdom,folkesjukdom,1.0
 fellingstillatelsene,fellingsløyva,1.0
 saksdokumentene,saksdokumenta,1.0
-debattmøte,eit,0.8
 glassflasker,glasflasker,1.0
 pålegger,pålegg,0.9137931034482759
 lederstrid,leiarstrid,1.0
@@ -4298,7 +4285,6 @@ trenerstolen,trenarstolen,1.0
 redningsaksjonene,redningsaksjonane,1.0
 påpekte,påpeika,0.7186544342507645
 narkotikabrukere,narkotikabrukarar,1.0
-fundament,eit,0.7837837837837838
 segmenter,segment,0.9545454545454546
 skadeforsikringsselskaper,naturskadepool,0.7272727272727273
 mennesker,menneske,0.9858960600950483
@@ -4333,7 +4319,6 @@ skoleelev,skuleelev,0.875
 årskullene,årskulla,1.0
 france-klm,air,1.0
 skoleplass,skuleplass,1.0
-rettssikkerhetsproblem,eit,0.8333333333333334
 hvisker,kviskrar,0.6666666666666666
 trøstemål,trøystemål,0.8333333333333334
 ubesvart,spørsmål,0.8
@@ -4487,7 +4472,6 @@ vannkvaliteten,vasskvaliteten,1.0
 søkeprosessen,søkjeprosessen,0.8888888888888888
 diabetespasienter,diabetespasientar,1.0
 firestjernersturneringen,firestjernersturneringa,0.875
-gjenfunnet,eit,0.6
 prix-renn,grand,1.0
 anmeldte,melde,0.7088607594936709
 arbeidsgivernes,arbeidsgjevarane,0.5714285714285714
@@ -4649,8 +4633,7 @@ boforhold,buforhold,0.875
 bevæpningen,væpninga,0.9193548387096774
 referater,referat,0.9166666666666666
 konklusjoner,konklusjonar,0.7518248175182481
-høysikkerhetsfengsel,eit,0.8571428571428571
-landingsfartøy,eit,1.0
+høysikkerhetsfengsel,høgtryggingsfengsel,0.8571428571428571
 givere,givarar,0.7878787878787878
 juventus-spiller,juventus-spelar,1.0
 --tallet,--talet,0.8571428571428571
@@ -4727,7 +4710,6 @@ penere,finare,0.625
 kobbergiganten,kopargiganten,1.0
 energiprosjekter,energiprosjekt,1.0
 tjenestereiser,tenestereiser,1.0
-karakterdrap,eit,1.0
 ledes,leidd,0.6148867313915858
 leder,leiar,0.7935118984099883
 regionvalget,regionvalet,1.0
@@ -4776,7 +4758,6 @@ maktpåliggende,maktpåliggjande,0.8
 militærflyene,militærflya,1.0
 tilføres,tilført,0.7333333333333333
 utenlandsferien,utanlandsferien,1.0
-halvsekund,eit,1.0
 barcelona-spilleren,barcelona-spelaren,1.0
 -divisjonsklubber,-divisjonsklubbar,1.0
 bymiljøpakkene,bymiljøpakkane,0.8571428571428571
@@ -4961,7 +4942,6 @@ kapteiner,kapteinar,0.875
 trålingen,trålinga,1.0
 framleggelse,framlegging,0.7142857142857143
 elvarebiler,elvarebilar,0.9333333333333333
-samarbeidsforum,eit,0.7272727272727273
 faddere,fadrar,0.7142857142857143
 eldreombudet,eldreombodet,0.9302325581395349
 samtaletilbud,samtaletilbod,0.875
@@ -4985,7 +4965,7 @@ ministermøter,ministermøte,1.0
 hjelpetrengende,hjelpetrengande,1.0
 suppleres,supplerast,0.5384615384615384
 omspillsfase,omspelsfase,1.0
-kjøkkenhåndkle,eit,0.8333333333333334
+kjøkkenhåndkle,kjøkkenhandkle,0.8333333333333334
 usminket,usminka,1.0
 seriemorder,seriemordar,1.0
 sikkerhetskontrollen,tryggingskontrollen,0.8666666666666667
@@ -5420,7 +5400,6 @@ intifadaen,andre,1.0
 oscar-nominasjoner,oscar-nominasjonar,1.0
 tollprosedyrer,vidareført,1.0
 ungdomsskolen,ungdomsskulen,0.9151785714285714
-koronaår,eit,0.8333333333333334
 asylbarnsaken,asylbarnsaka,0.75
 siktelsene,siktingane,1.0
 strømforbindelsen,straumsambandet,0.6666666666666666
@@ -5530,6 +5509,7 @@ politidekningen,politidekninga,1.0
 hydrogentankene,hydrogentankane,1.0
 syltet,sylta,0.9230769230769231
 tiendeplassen,tiandeplassen,1.0
+jones-indeksen,dow,1.0
 turde,torde,0.8333333333333334
 begeistrede,begeistra,1.0
 kalte,kalla,0.9753424657534246
@@ -5820,7 +5800,6 @@ framrykkingen,framrykkinga,1.0
 vannforskning,institutt,1.0
 etterfølge,etterfølgje,0.8947368421052632
 kanoer,kanoar,0.8571428571428571
-rettssamfunn,eit,1.0
 rentepapirer,rentepapir,1.0
 forlengning,forlenging,0.8571428571428571
 helgeværet,helgevêret,0.96
@@ -5873,7 +5852,7 @@ kvartalstallene,kvartalstala,0.9354838709677419
 konfirmanter,konfirmantar,0.84
 foretatt,gjort,0.6709511568123393
 nyhets-,nyheits-,0.8333333333333334
-tjuetall,eit,0.9375
+tjuetall,tjuetal,0.8125
 hovedtallene,hovudtala,1.0
 utstrakt,utstrekt,0.6952380952380952
 samfunnsforskning,institutt,0.8878504672897196
@@ -5953,7 +5932,6 @@ berg-saken,berg-saka,1.0
 bilskiltene,bilskilta,0.8333333333333334
 øst-tyskland,aust-tyskland,0.9090909090909091
 ol-utøverne,ol-utøvarane,1.0
-økosystem,eit,0.8571428571428571
 mel,mjøl,0.9038461538461539
 mer,meir,0.9805870658402526
 met,oslomet,0.6086956521739131
@@ -6271,7 +6249,6 @@ strafferettslige,strafferettslege,0.9444444444444444
 bompengegjelden,bompengegjelda,1.0
 førsteforfatter,førsteforfattar,0.8636363636363636
 destinasjonene,destinasjonane,0.9545454545454546
-bistandsprogram,eit,1.0
 sen,sein,0.8210526315789474
 ses,sjåast,0.5266666666666666
 hvassere,kvassare,1.0
@@ -6692,7 +6669,6 @@ utbredelsen,utbreiinga,0.9655172413793104
 piggtrådgjerder,piggtrådgjerde,1.0
 kielland-saken,kielland-saka,1.0
 leddbåndet,leddbandet,0.9230769230769231
-medikament,eit,0.8
 korsvei,ved,0.8571428571428571
 juryleder,juryleiar,0.98
 letingen,leitinga,1.0
@@ -6783,8 +6759,7 @@ brekkstang,brekkstong,1.0
 corner,hjørnespark,0.875
 hytteforbudet,hytteforbodet,1.0
 ingstad-forliset,rapport,1.0
-satellittbilde,eit,0.6666666666666666
-fiskeripoliti,eit,1.0
+fiskeripoliti,opprette,1.0
 anleggsnæringen,anleggsnæringa,1.0
 dietter,diettar,1.0
 måter,måtar,0.9769911504424779
@@ -6816,7 +6791,7 @@ massepermitteringer,massepermitteringar,0.5555555555555556
 førerretten,førarretten,1.0
 høyre-politikerne,høgre-politikarane,1.0
 kystriksveien,kystriksvegen,1.0
-tjuetalls,eit,1.0
+tjuetalls,tjuetals,0.9285714285714286
 nysalderingen,nysalderinga,1.0
 lærerutdanning,lærarutdanning,0.961038961038961
 julegudstjeneste,julegudsteneste,1.0
@@ -6925,7 +6900,6 @@ kirkerådsleder,kyrkjerådsleiar,1.0
 klimagassutslippet,klimagassutsleppet,0.875
 klimakvotene,klimakvotane,1.0
 rumenerne,rumenarane,1.0
-tankekors,eit,1.0
 sprenge,sprengje,0.6875
 sprengt,sprengd,0.5314685314685315
 vaksinetypene,vaksinetypane,1.0
@@ -7141,7 +7115,6 @@ nytenkning,nytenking,0.875
 bilutstillingen,bilutstillinga,1.0
 visepolitimester,visepolitimeister,1.0
 skoleorganisasjonene,skuleorganisasjonane,1.0
-sikkerhetsproblem,eit,0.7777777777777778
 abortforbud,abortforbod,1.0
 ringene,ringane,0.9
 impero,stena,1.0
@@ -7191,7 +7164,7 @@ torpedoene,torpedoane,1.0
 ladede,lada,1.0
 lederstolen,leiarstolen,1.0
 hasvang,vaag,1.0
-glassmonter,eit,1.0
+glassmonter,glasmonter,1.0
 kraftleverandørene,kraftleverandørane,1.0
 skuddsikker,skotsikker,1.0
 våkner,vaknar,0.9302325581395349
@@ -7199,7 +7172,7 @@ fjorårsvinner,fjorårsvinnar,1.0
 våknet,vakna,0.9821428571428571
 hovedteori,politiet,0.75
 turistenes,turistane,1.0
-pensjonistforbundets,eit,0.75
+pensjonistforbundets,davidsen,0.625
 nødsamtaler,nødsamtalar,0.8333333333333334
 etterslukking,ettersløkking,0.875
 -årsmarkeringen,-årsmarkeringa,0.9787234042553191
@@ -7281,7 +7254,6 @@ storflom,storflaum,0.9333333333333333
 valgresultat,valresultat,0.91
 eurosonen,eurosona,0.981042654028436
 fløten,fløyten,1.0
-samtaleemne,eit,0.9090909090909091
 boligsak,bustadsak,1.0
 innreiseordningen,innreiseordninga,1.0
 reagenser,reagens,1.0
@@ -7398,7 +7370,7 @@ anskaffelser,innkjøp,0.8048780487804879
 forglemmelse,forgløyming,0.8
 arbeidstidsregler,arbeidstidsreglar,1.0
 henholdsvis,høvesvis,0.9700285442435775
-hestehode,eit,1.0
+hestehode,hestehovud,1.0
 kommunepolitikere,kommunepolitikarar,0.875
 etappeseire,etappesigrar,1.0
 familienes,familiane,0.8888888888888888
@@ -7811,7 +7783,7 @@ nazister,nazistar,0.9230769230769231
 hytteinnbrudd,hytteinnbrot,1.0
 arbeidsstedet,arbeidsstaden,1.0
 forskningen,forskinga,0.964
--talls,eit,0.9090909090909091
+-talls,-tals,0.8181818181818182
 ildsjeler,eldsjeler,1.0
 hjemlige,heimlege,1.0
 legenden,legenda,1.0
@@ -7870,7 +7842,7 @@ videoovervåking,videoovervaking,0.9655172413793104
 fraværsgrensen,fråværsgrensa,0.9726027397260274
 matthijs,ligt,1.0
 steppet,steppa,1.0
-stepper,inn,1.0
+stepper,steppar,1.0
 forbrukerens,forbrukaren,0.6666666666666666
 tingdelegatene,tingdelegatane,1.0
 fotografer,fotografar,0.9642857142857143
@@ -8075,7 +8047,7 @@ motorproblemer,motorproblem,1.0
 bidragsyter,bidragsytar,0.9552238805970149
 bjørnetjeneste,bjørneteneste,0.9285714285714286
 morgentimene,morgontimane,1.0
-engangstilfelle,eit,1.0
+engangstilfelle,eingongstilfelle,1.0
 skreddersydd,skreddarsydd,0.8787878787878788
 avskaffes,avskaffast,0.7
 avskaffet,avskaffa,0.96
@@ -8385,7 +8357,6 @@ sexdukke,sexdokke,0.8333333333333334
 kulturhistoriker,kulturhistorikar,1.0
 lammelser,lammingar,0.8333333333333334
 taubåter,taubåtar,1.0
-legesenter,eit,1.0
 skilte,skilde,0.7009345794392523
 velferdsordningene,velferdsordningane,1.0
 pilegrimer,pilegrimar,0.9545454545454546
@@ -8467,7 +8438,7 @@ verksteder,verkstader,0.8518518518518519
 satiriks,nrk,1.0
 uber-sjåfører,uber-sjåførar,1.0
 klarner,klarnar,1.0
-håndkleet,inn,0.9777777777777777
+håndkleet,handkleet,0.9555555555555556
 radioene,radioane,1.0
 brannmannskaper,brannmannskap,0.9444444444444444
 statsstøttereglene,statsstøttereglane,1.0
@@ -8562,7 +8533,7 @@ modellene,modellane,1.0
 trygdemottakere,trygdemottakarar,0.9
 samfunnsområder,samfunnsområde,1.0
 gurli,ulverud,1.0
-krasjkurs,flåttsenteret,1.0
+krasjkurs,arrangerer,1.0
 ferden,ferda,0.9814814814814815
 ferdes,ferdast,0.9615384615384616
 nøkkelspiller,nøkkelspelar,0.95
@@ -9114,7 +9085,7 @@ strømbrudd,straumbrot,0.9772727272727273
 samvittighetsfange,samvitsfange,0.75
 veiskille,vegskilje,1.0
 valgkamputspill,valkamputspel,1.0
-byggeprosjekt,eit,0.875
+byggeprosjekt,byggjeprosjekt,0.625
 ferskeste,ferskaste,1.0
 fløyen,fløya,0.8181818181818182
 tariffoppgjøret,tariffoppgjeret,0.9655172413793104
@@ -9138,7 +9109,6 @@ glasstak,glastak,0.8571428571428571
 tåregassgranater,tåregassgranatar,1.0
 fødetilbudet,fødetilbodet,0.92
 mørkerøde,mørkeraude,0.9534883720930233
-forbilde,eit,0.7121212121212122
 mørkerødt,mørkeraudt,1.0
 redningshelikoptre,redningshelikopter,1.0
 kommuneoppgjør,kommuneoppgjeret,0.6666666666666666
@@ -9176,7 +9146,6 @@ ladehybridene,ladehybridane,1.0
 leicester-manager,rodgers,1.0
 q-meierienes,q-meieriene,0.8333333333333334
 påpasselig,påpasseleg,0.8125
-halvpoeng,eit,1.0
 ap-ordførere,ap-ordførarar,1.0
 forsvarsstudier,institutt,1.0
 håndteringen,handteringa,0.9747634069400631
@@ -9542,7 +9511,6 @@ medlemsundersøkelsen,medlemsundersøkinga,1.0
 oppmykninger,oppmjukingar,0.8181818181818182
 veteraner,veteranar,0.9393939393939394
 testkriteriene,testkriteria,1.0
-innvalgt,inn,0.9264705882352942
 tilråder,tilrår,1.0
 oppmykningen,oppmjukinga,1.0
 basilicata,italia,1.0
@@ -9556,7 +9524,7 @@ oppkjøringsturnering,oppkøyringsturnering,1.0
 evalueres,evaluerast,0.82
 arbeidsgiverorganisasjonen,arbeidsgivarorganisasjonen,0.8111111111111111
 gruppevinner,gruppevinnar,1.0
-statsgarantert,eit,1.0
+statsgarantert,lån,1.0
 flyktningboliger,flyktningbustader,0.8333333333333334
 campingbiler,campingbilar,1.0
 fellingen,fellinga,0.9024390243902439
@@ -9874,7 +9842,6 @@ sas-pilotene,sas-pilotane,1.0
 forfatterstipend,leikvoll,0.6
 bakes,bakt,0.6153846153846154
 sæddonor,barn,0.8333333333333334
-helseproblem,eit,1.0
 håpt,håpa,0.8333333333333334
 hovedgrunnen,hovudgrunnen,0.9873417721518988
 hovedgrunner,hovudgrunnar,1.0
@@ -9896,6 +9863,7 @@ listekandidater,listekandidatar,0.9333333333333333
 modeller,modellar,0.896551724137931
 gammeldagse,gammaldagse,0.9375
 jernbanereformen,jernbanereforma,1.0
+rowdy,rough,1.0
 sykdomsforløp,sjukdomsforløp,0.819672131147541
 reaksjonsformen,reaksjonsforma,1.0
 betingelsesløst,eid,0.6
@@ -9959,7 +9927,6 @@ ntnu-forsker,ntnu-forskar,1.0
 nedbørsrekorder,nedbørsrekordar,0.95
 bestukket,ha,0.7272727272727273
 kasteballer,kasteballar,0.8
-rough,rowdy,1.0
 framleggingen,framlegginga,1.0
 fn-støttede,fn-støtta,1.0
 kraftressurser,kraftressursar,1.0
@@ -10118,7 +10085,6 @@ håndballkvinnene,handballkvinnene,1.0
 skytteren,skyttaren,0.9565217391304348
 toppspiller,toppspelar,1.0
 hopetall,hopetal,1.0
-nisjeprodukt,eit,1.0
 meterne,meterane,0.9615384615384616
 brukerombud,brukarombod,1.0
 farmerlaget,farmarlaget,1.0
@@ -10304,7 +10270,6 @@ stoppere,stopparar,1.0
 helseskadelig,helseskadeleg,0.9824561403508771
 cruiseulykke,nord,1.0
 betalingsanmerkninger,betalingsmerknader,0.9615384615384616
-grunnprinsipp,eit,0.8
 hemmer,hemmar,0.8529411764705882
 hemmet,hemma,1.0
 stortingsrepresentanter,stortingsrepresentantar,0.8966789667896679
@@ -10688,7 +10653,6 @@ farevarslene,farevarsla,1.0
 tohjulinger,tohjulingar,1.0
 havforskere,havforskarar,1.0
 hjemmetapet,heimetapet,1.0
-skjoldet,eit,0.6
 hensynsløs,omsynslaus,1.0
 vold-,vald-,0.75
 industriprosesser,industriprosessar,1.0
@@ -10888,7 +10852,6 @@ linge-utbyggingen,linge-utbygginga,1.0
 ladepunkter,ladepunkt,1.0
 kostopoulos,aleksander,1.0
 alarmene,alarmane,1.0
-maktmiddel,eit,1.0
 sikkerheten,tryggleiken,0.6253968253968254
 personlig,personleg,0.9706744868035191
 tilbakeføringen,tilbakeføringa,1.0
@@ -11295,7 +11258,7 @@ alminnelig,alminneleg,0.9615384615384616
 ssb-forsker,ssb-forskar,0.9555555555555556
 stabæk-spilleren,stabæk-spelaren,1.0
 langrennsdronningen,langrennsdronninga,1.0
-hundretall,eit,1.0
+hundretall,hundretal,1.0
 forbundene,forbunda,0.9714285714285714
 utviklingshemmede,utviklingshemma,0.9666666666666667
 flyktningenes,flyktningane,0.875
@@ -11401,7 +11364,6 @@ danserne,dansarane,1.0
 bombetrusler,bombetruslar,1.0
 spesifikasjoner,spesifikasjonar,0.8571428571428571
 vekstmuligheter,vekstmoglegheiter,0.8333333333333334
-preparat,eit,0.8571428571428571
 melkekvotene,mjølkekvotane,1.0
 forskningsresultater,forskingsresultat,0.95
 hundesykdommen,hundesjukdommen,0.8461538461538461
@@ -11618,7 +11580,7 @@ studentorganisasjoner,studentorganisasjonar,1.0
 kroppskrenkelse,kroppskrenking,1.0
 økonomiene,økonomiane,0.9
 barneskoleelever,barneskuleelevar,1.0
-trusselbilde,eit,0.75
+trusselbilde,trusselbilete,0.6875
 ekspedisjonsleder,ekspedisjonsleiar,0.8
 tygge,tyggje,0.8
 hjalp,hjelpte,0.9752475247524752
@@ -11815,7 +11777,7 @@ hærfører,hærførar,0.8571428571428571
 ledigheten,arbeidsløysa,0.9321533923303835
 mètral,haussener,1.0
 toppene,toppane,0.9491525423728814
-åpningsbrev,eit,0.8
+åpningsbrev,formelt,0.8
 elektrisitetsprisene,elektrisitetsprisane,1.0
 stillere,stillare,1.0
 uttalelsene,utsegnene,0.6962025316455697
@@ -11841,7 +11803,7 @@ oppslagene,oppslaga,1.0
 sommerføre,sommarføre,1.0
 innmeldinger,innmeldingar,0.8947368421052632
 undergravende,undergravande,1.0
-ferdighetsnivå,eit,0.8
+ferdighetsnivå,kan,0.6
 svingte,svinga,0.9666666666666667
 rausere,rausare,1.0
 kildekoden,kjeldekoden,1.0
@@ -11987,7 +11949,7 @@ innse,innsjå,0.9552238805970149
 sørøst,søraust,0.8729582577132486
 fn-støttet,fn-støtta,1.0
 underliggende,underliggjande,0.8760563380281691
-reservepreget,eit,1.0
+reservepreget,reserveprega,1.0
 dilemmaene,dilemmaa,0.9
 velegnet,veleigna,0.7391304347826086
 forholdsregler,forholdsreglar,0.905982905982906
@@ -12008,7 +11970,6 @@ motsetter,motset,0.8070175438596491
 islagte,islagde,0.9166666666666666
 foreldrenes,foreldra,0.86
 statsministermålingen,statsministermålinga,1.0
-folkeslag,eit,0.8
 nav-kontorer,nav-kontor,0.9444444444444444
 helhetlige,heilskaplege,0.9512195121951219
 togsettene,togsetta,1.0
@@ -12081,7 +12042,7 @@ engster,engstar,1.0
 tegneserie,teikneserie,1.0
 europaligaens,europaligaen,0.8
 magasiner,magasin,0.9230769230769231
-førstehopp,eit,0.8
+førstehopp,godt,0.6
 fagforeningsfradrag,fagforeiningsfrådrag,1.0
 dagene,dagane,0.9937369519832986
 dansende,dansande,1.0
@@ -12113,7 +12074,7 @@ framkommer,fram,0.9565217391304348
 næringsforbud,næringsforbod,1.0
 kollektivtilbudet,kollektivtilbodet,1.0
 personenes,personane,0.8
-regjeringsoppnevnt,eit,0.7419354838709677
+regjeringsoppnevnt,regjeringsoppnemnt,0.6129032258064516
 svensker,svenskar,0.9732620320855615
 høringsrunde,høyringsrunde,0.9642857142857143
 sykepleierstreiken,sjukepleiarstreiken,1.0
@@ -12429,7 +12390,7 @@ krutonger,krutongar,1.0
 borgere,borgarar,0.9253731343283582
 konkurranseevnen,konkurranseevna,1.0
 håver,håvar,0.9285714285714286
-håvet,inn,0.9230769230769231
+håvet,håva,0.8461538461538461
 valgmøter,valmøte,0.9166666666666666
 overdrevne,overdrivne,1.0
 fremstille,framstille,0.8260869565217391
@@ -12474,7 +12435,6 @@ engstelige,engstelege,0.953125
 havvindprosjekter,havvindprosjekt,0.9473684210526315
 drøftingene,drøftingane,1.0
 streifet,streifa,1.0
-lydbilde,eit,0.8571428571428571
 beachhåndball,beachhandball,0.8
 motorvarmer,motorvarmar,1.0
 fylkeslederen,fylkesleiaren,0.7857142857142857
@@ -12621,9 +12581,9 @@ korallbleking,korallbleiking,1.0
 svelge,svelgje,0.8378378378378378
 stirrer,stirer,0.8333333333333334
 taiwanstredet,taiwansundet,0.9285714285714286
-bybilde,eit,0.8
+bybilde,bybilete,0.8
 interessentene,interessentane,1.0
-namn,eit,1.0
+namn,nytt,1.0
 utviklingslandene,utviklingslanda,1.0
 samfunnsvitenskapelig,samfunnsvitskapleg,0.7777777777777778
 presanger,presangar,1.0
@@ -13369,7 +13329,6 @@ aksjoner,aksjonar,0.9266666666666666
 læremesteren,læremeisteren,1.0
 romanpris,romanprisen,0.75
 sommerleir,sommarleir,0.8192771084337349
-ordskifte,eit,1.0
 fulltegnet,fullteikna,0.9375
 tvangsreturneres,tvangsreturnerast,0.8333333333333334
 utrustet,utrusta,0.8666666666666667
@@ -13704,7 +13663,6 @@ akkrediteringer,akkrediteringar,0.875
 arbeidsgiverorganisasjonene,arbeidsgivarorganisasjonane,0.8421052631578947
 helseopplysninger,helseopplysningar,0.967741935483871
 førstegangsregistrert,førstegongsregistrert,1.0
-risikobilde,eit,0.625
 førstelinjen,førstelinja,1.0
 tålmodige,tolmodige,0.9032258064516129
 kastet,kasta,0.9616368286445013
@@ -13712,7 +13670,6 @@ kastes,kasta,0.556390977443609
 kaster,kastar,0.9923664122137404
 avsløringen,avsløringa,0.9692307692307692
 avsløringer,avsløringar,0.9320388349514563
-maktbase,eit,0.6666666666666666
 vannbombefly,vassbombefly,0.8
 begjære,krevje,0.9130434782608695
 storspillet,storspelet,1.0
@@ -14078,7 +14035,6 @@ beskrivelse,skildring,0.676056338028169
 kampanjeleder,kampanjeleiar,1.0
 terrorhendelse,terrorhending,1.0
 innreiserestriksjonene,innreiserestriksjonane,1.0
-balansepunkt,eit,1.0
 prisbelønte,prislønte,0.9767441860465116
 matkjeden,matkjeda,1.0
 trøyen,trøya,1.0
@@ -14185,7 +14141,6 @@ framføringen,framføringa,1.0
 menyer,menyar,1.0
 helnorske,heilnorske,1.0
 årtusenet,tusenåret,1.0
-samlebetegnelse,eit,0.6
 sannsynlighetsovervekt,sannsynsovervekt,0.75
 sauser,sausar,1.0
 gassoljer,marine,1.0
@@ -14302,7 +14257,6 @@ hetende,heitande,0.95
 vaktleder,vaktleiar,1.0
 benytte,nytte,0.890652557319224
 verneområder,verneområde,1.0
-seaking-helikopter,eit,1.0
 skrinlegger,skrinlegg,1.0
 forsommeren,forsommaren,1.0
 fiender,fiendar,0.7619047619047619
@@ -14376,7 +14330,6 @@ landslagsspillere,landslagsspelarar,0.8461538461538461
 iverksatt,verk,0.959349593495935
 ol-sølvvinner,ol-sølvvinnar,0.8333333333333334
 mesterligakamp,meisterligakamp,0.7368421052631579
-biprodukt,eit,1.0
 verdensranking,verdsranking,0.6666666666666666
 egypterne,egyptarane,1.0
 atp-sluttspillet,atp-sluttspelet,0.9375
@@ -14485,7 +14438,6 @@ drukningsforebyggende,drukningsførebyggjande,0.8
 radiostasjonene,radiostasjonane,1.0
 midtuka,midtveka,1.0
 bedragerier,bedrageri,0.9661016949152542
-kassert,inn,0.75
 blåskjellvarselet,blåskjelvarselet,1.0
 ansiktsgjenkjenning,ansiktsattkjenning,0.6363636363636364
 betalende,betalande,0.9705882352941176
@@ -14517,7 +14469,6 @@ hjemlet,heimla,0.8571428571428571
 sjokkartet,sjokkarta,1.0
 høste,hauste,0.9384615384615385
 avtagende,minkande,0.5925925925925926
-komplekst,eit,0.5454545454545454
 forutsatt,føresett,0.7721518987341772
 letemannskaper,leitemannskap,0.9230769230769231
 annekteringen,annekteringa,1.0
@@ -15100,7 +15051,6 @@ smutthull,smotthol,0.9523809523809523
 utredningsarbeid,utgreiingsarbeid,0.8333333333333334
 eksamenskarakterene,eksamenskarakterane,1.0
 stressfaktorer,stressfaktorar,1.0
-vrede,eit,0.5454545454545454
 toppscorerlisten,toppskårarlista,1.0
 timers,timars,0.8876404494382022
 spaserstokken,kulturelle,1.0
@@ -15125,7 +15075,6 @@ dundrende,dundrande,1.0
 fotballturnering,fotballturneringa,0.6666666666666666
 fascinerende,fascinerande,0.9473684210526315
 nåløye,nålauge,0.6666666666666666
-føre-var-prinsipp,eit,1.0
 kolonnekjøring,kolonnekøyring,0.9880952380952381
 foreldreutvalget,foreldreutvalet,0.7931034482758621
 spesialtilpasset,spesialtilpassa,0.625
@@ -15145,7 +15094,7 @@ hjelpepakkene,hjelpepakkane,0.8571428571428571
 helseforskning,helseforsking,1.0
 skattemyndigheter,skattestyresmakter,0.6956521739130435
 nonnen,nonna,1.0
-oljerør,eit,0.6
+oljerør,etter,0.6
 ifølge,ifølgje,0.9738089299077076
 filippinere,filippinarar,1.0
 organiseringen,organiseringa,1.0
@@ -15311,7 +15260,6 @@ oppholdstid,opphaldstid,0.8571428571428571
 astronauter,astronautar,0.9464285714285714
 opptreningen,opptreninga,0.95
 tjenestepensjonsordning,tenestepensjonsordning,1.0
-auksjonshus,eit,1.0
 byggeprosjektene,byggjeprosjekta,0.9
 instanser,instansar,0.9863013698630136
 veivedlikehold,vegvedlikehald,0.7777777777777778
@@ -15605,7 +15553,7 @@ basestasjonene,basestasjonane,1.0
 ol-utøvere,ol-utøvarar,0.9545454545454546
 instruktører,instruktørar,0.95
 innovasjonsmiljøer,innovasjonsmiljø,1.0
-storslagent,eit,1.0
+storslagent,storslått,0.8
 styrkeoppbyggingen,styrkeoppbygginga,1.0
 måloppnåelse,måloppnåing,0.7692307692307693
 paraplyer,paraplyar,1.0
@@ -15661,7 +15609,7 @@ ballvekslinger,ballvekslingar,1.0
 avdelingsleder,avdelingsleiar,0.9662921348314607
 svømmestjernen,symjestjerna,0.8
 innenriksruter,innanriksruter,1.0
-partssammensatt,eit,1.0
+partssammensatt,partssamansett,0.8823529411764706
 nådeløse,nådelause,0.7857142857142857
 pisa-undersøkelse,norske,1.0
 køer,køar,0.974025974025974
@@ -15935,7 +15883,6 @@ løsne,losne,0.7313432835820896
 direktesendte,direktesende,0.9
 lovlige,lovlege,0.9791666666666666
 stemmeseddel,stemmesetel,1.0
-forsøksprosjekt,eit,1.0
 nettbutikkene,nettbutikkane,1.0
 atferdsendringer,åtferdsendringar,1.0
 skredsøkere,skredsøkarar,1.0
@@ -16043,7 +15990,7 @@ kanaler,kanalar,0.8177339901477833
 fortsatt,framleis,0.9589287498750875
 antennes,kan,1.0
 skorter,skortar,1.0
-presseoppbud,eit,1.0
+presseoppbud,presseoppbod,0.8571428571428571
 medieoppmerksomhet,mediemerksemd,0.875
 unnta,bort,0.5384615384615384
 covid--tilfeller,covid--tilfelle,1.0
@@ -16226,7 +16173,6 @@ søkningen,søkinga,1.0
 ambulansekapreren,ambulansekapraren,1.0
 innlagt,innlagde,0.8683697001951393
 budsjettoverskridelser,budsjettoverskridingar,1.0
-ops-prosjekt,eit,1.0
 stadfester,stadfestar,0.7857142857142857
 stadfestet,stadfesta,0.8888888888888888
 årsverkene,årsverka,0.9565217391304348
@@ -16287,7 +16233,6 @@ fredsavtaler,fredsavtalar,0.8333333333333334
 forsuringen,forsuringa,1.0
 antyder,antydar,0.8960573476702509
 virkemidlene,verkemidla,0.9565217391304348
-par-tre,eit,1.0
 antydet,antyda,0.865
 omleggingen,omlegginga,0.926829268292683
 tennisveteranen,roger,1.0
@@ -16389,7 +16334,6 @@ bilfører,bilførar,1.0
 skoleskytingen,skuleskytinga,1.0
 matmarked,matmarknad,1.0
 middelvei,ønskjer,0.7
-signalbygg,eit,0.8
 redningsbåter,redningsbåtar,0.875
 stortingskomiteene,stortingskomiteane,1.0
 ligaledelsen,ligaleiinga,1.0
@@ -16766,7 +16710,6 @@ tettsittende,tettsitjande,1.0
 miljøvennlige,miljøvennlege,0.9401709401709402
 smakstilsetninger,smakstilsetningar,1.0
 etternavnet,etternamnet,1.0
-transportfirma,eit,1.0
 tryggest,tryggast,0.9142857142857143
 sysler,syslar,1.0
 energimarkedspakke,tredje,0.95
@@ -16912,7 +16855,7 @@ turneringsseier,turneringssiger,0.6153846153846154
 hovedvalutaene,hovudvalutaene,1.0
 nøyere,nøyare,0.8
 forstyrrelse,forstyrring,0.7142857142857143
-værvindu,eit,1.0
+værvindu,vêrvindauge,1.0
 tålegrense,låg,0.5714285714285714
 øreplugger,øyrepluggar,1.0
 påregnelig,pårekneleg,1.0
@@ -17489,7 +17432,7 @@ landene,landa,0.9863013698630136
 passasjertall,passasjertal,0.9130434782608695
 fronter,frontar,0.9911504424778761
 frontet,fronta,0.9642857142857143
-øyenvitne,eit,0.8461538461538461
+øyenvitne,augnevitne,0.5769230769230769
 bekker,vassføring,0.5645161290322581
 feide,feia,0.8461538461538461
 kollapser,kollapsar,0.9333333333333333
@@ -17951,7 +17894,7 @@ russiskeide,russiskeigde,0.9166666666666666
 avislesingen,avislesinga,1.0
 håndball-vms,handball-vms,0.8
 strammer,strammar,0.9928571428571429
-strammes,inn,0.8125
+strammes,stramma,0.7
 viasat-kanalene,får,1.0
 strammet,stramma,0.981042654028436
 organisasjonsfrihet,organisasjonsfridom,0.8571428571428571
@@ -18116,7 +18059,6 @@ norgeshistorien,noregshistoria,0.9285714285714286
 gynt-pris,peer,1.0
 smitteklynge,smitteklyngje,1.0
 krigsflyktninger,krigsflyktningar,0.9333333333333333
-teaterstykke,eit,1.0
 fabrikkens,fabrikken,1.0
 nivåer,nivå,0.9794520547945206
 kristendemokrater,kristendemokratar,1.0
@@ -18543,7 +18485,7 @@ nyansettelser,nytilsetjingar,0.7857142857142857
 undersøkende,journalistikk,0.6
 saltinnholdet,saltinnhaldet,1.0
 målere,målarar,0.6666666666666666
-speilbilde,eit,1.0
+speilbilde,spegelbilde,0.5714285714285714
 avvisning,avvising,0.6428571428571429
 voksenvalget,vaksenvalet,1.0
 omfattes,omfatta,0.7679558011049724
@@ -18591,7 +18533,6 @@ regjeringskollegene,regjeringskollegaene,1.0
 seriemester,seriemeister,0.9818181818181818
 festspilldirektør,festspeldirektør,0.9473684210526315
 gjemt,gøymt,0.6451612903225806
-startfelt,eit,0.8888888888888888
 intensivplassene,intensivplassane,1.0
 kommentarer,kommentarar,0.9258064516129032
 minkfarmer,minkfarmar,1.0
@@ -18968,7 +18909,7 @@ fagpersoner,fagpersonar,1.0
 lærernes,lærarane,0.8888888888888888
 kirke,kyrkja,0.5248070562293274
 bukker,bukkar,1.0
-øyeblikksbilde,eit,1.0
+øyeblikksbilde,augneblinksbilete,0.7777777777777778
 anklager,skuldar,0.5900537634408602
 anklaget,skulda,0.9686956521739131
 anklages,skulda,0.9347826086956522
@@ -19018,7 +18959,6 @@ valper,kvalpar,0.6966292134831461
 valpen,kvalpen,0.8333333333333334
 langfilmer,langfilmar,1.0
 fostervannsprøve,fostervassprøve,1.0
-våpensystem,eit,1.0
 mekleren,meklaren,1.0
 sørkoreanere,sørkoreanarar,1.0
 trosser,trassar,0.9047619047619048
@@ -19152,7 +19092,6 @@ utvinningstillatelsene,utvinningsløyva,1.0
 havnelageret,hamnelageret,0.875
 innsamlede,innsamla,0.972972972972973
 oftere,oftare,0.9922480620155039
-springbrett,eit,1.0
 straffebud,straffebod,0.6666666666666666
 representasjonsanlegg,erna,0.6
 oftest,oftast,0.9835526315789473
@@ -19430,7 +19369,6 @@ katastrofevalg,katastrofeval,1.0
 forfaller,forfell,0.8857142857142857
 opptakskravene,opptakskrava,0.875
 mikhailova,olga,1.0
-sportsarrangement,eit,0.6
 vaksineringsscenarioet,vaksinasjonsscenarioet,1.0
 værmeldingene,vêrmeldingane,0.9090909090909091
 fjellområder,fjellområde,0.9333333333333333
@@ -19490,7 +19428,6 @@ sammenligner,samanliknar,0.9696969696969697
 sammenlignet,samanlikna,0.8518518518518519
 sykkelturer,sykkelturar,0.7777777777777778
 banebrytende,banebrytande,0.9393939393939394
-skogområde,eit,1.0
 etterretningstjenestene,etterretningstenestene,1.0
 realister,realistar,1.0
 skoleeiere,skuleeigarar,0.8518518518518519
@@ -19808,7 +19745,6 @@ erklæringer,erklæringar,0.9285714285714286
 erklæringen,erklæringa,0.8867924528301887
 rost,rosa,0.6875
 kompensasjonstiltakene,kompensasjonstiltaka,1.0
-kjempeproblem,eit,1.0
 uløst,uløyst,0.8095238095238095
 ettermiddagsbyger,ettermiddagsbyer,0.9166666666666666
 rosø,seier,1.0
@@ -19826,6 +19762,7 @@ gullvinneren,gullvinnaren,1.0
 landsbyer,landsbyar,0.9924242424242424
 ureturnerbar,asylsøkar,0.9
 sportskjeden,sportskjeda,1.0
+økumenikk,christian,1.0
 boligprosjekter,bustadprosjekt,0.8333333333333334
 selvfølelsen,sjølvkjensla,1.0
 diktsamling,diktsamlinga,0.5384615384615384
@@ -19847,7 +19784,7 @@ høyre-regjeringen,høgre-regjeringa,1.0
 ungdommer,ungdommar,0.96271637816245
 fengselsvesen,russlands,0.8
 fremmedfiendtlig,framandfiendtleg,0.8571428571428571
-leilighetskompleks,eit,1.0
+leilighetskompleks,leilegheitskompleks,1.0
 forviklinger,forviklingar,1.0
 granskingsutvalg,granskingsutval,1.0
 epostene,e-postane,0.9047619047619048
@@ -19917,7 +19854,6 @@ søsknene,søskena,0.9629629629629629
 avtalene,avtalane,0.9679144385026738
 oljeangrep,saudi-arabia,1.0
 innenlandske,innanlandske,0.9166666666666666
-halvminutt,eit,1.0
 bosted,bustad,0.856
 kineser,kinesar,0.625
 adsense,resett,1.0
@@ -20254,7 +20190,6 @@ forskerne,forskarane,0.9845474613686535
 aert,van,1.0
 holla,ved,1.0
 hodeplagg,hovudplagg,0.8235294117647058
-gjenskapes,eit,0.5714285714285714
 etiopia-ulykken,etiopia-ulykka,1.0
 verdenscupleder,verdscupleiar,1.0
 veitrafikkulykker,vegtrafikkulykker,0.75
@@ -20440,7 +20375,6 @@ kanelstang,kanelstong,1.0
 begrensninger,avgrensingar,0.9453681710213777
 begrensningen,avgrensinga,0.8695652173913043
 fafo-forsker,fafo-forskar,1.0
-voldsforherligende,eit,0.5714285714285714
 kvalifiseringsgruppe,kvalifiseringsgruppa,0.6
 ankommet,komme,0.8125
 forskningsleder,forskingsleiar,1.0
@@ -20704,7 +20638,7 @@ styrker,styrkar,0.7093373493975904
 indeksene,indeksane,1.0
 sjudagersperiode,sjudagarsperiode,1.0
 konkurranseavdelingen,konkurranseavdelinga,1.0
-engangstilskudd,eit,1.0
+engangstilskudd,eingongstilskot,1.0
 ansu,fati,1.0
 anså,rekna,0.5641025641025641
 sesongarbeider,sesongarbeidar,0.6666666666666666
@@ -20887,7 +20821,7 @@ motytelse,motyting,1.0
 sammenfallende,samanfallande,0.7368421052631579
 tennys,sandgren,1.0
 sifre,siffer,1.0
-stekebrett,eit,0.7857142857142857
+stekebrett,legg,0.6428571428571429
 beboere,bebuarar,0.9410681399631676
 utstillingsvindu,utstillingsvindauge,1.0
 schøttker,harry,1.0
@@ -21091,7 +21025,6 @@ tv-seriene,tv-seriane,1.0
 norskkunnskaper,norskkunnskapar,0.7619047619047619
 høylytt,høglydt,0.9444444444444444
 hjertesaker,hjartesaker,0.6956521739130435
-sanitetskvinnenes,eit,0.8
 bompenger,bompengar,0.9720149253731343
 matrester,matrestar,1.0
 forrædere,forrædarar,0.8
@@ -21218,7 +21151,7 @@ helsekøer,helsekøar,0.7142857142857143
 valgdirektoratet,valdirektoratet,0.9696969696969697
 snøscooterkjøring,snøscooterkøyring,0.6666666666666666
 hørselstap,høyrselstap,0.8
-skue,eit,0.6923076923076923
+skue,syn,0.6923076923076923
 skjærebrett,etter,1.0
 skatteinnbetalinger,skatteinnbetalingar,0.6666666666666666
 avgiftsøkninger,avgiftsaukar,0.5769230769230769
@@ -21287,7 +21220,7 @@ deiset,deisa,1.0
 overskuddsinformasjon,overskotsinformasjon,1.0
 personkonflikter,personkonfliktar,0.8
 middelalderhistorie,mellomalderhistorie,0.8
-tuareg-opprør,eit,1.0
+tuareg-opprør,mali,1.0
 fortløpende,fortløpande,0.7578947368421053
 statsforetaket,statsføretaket,1.0
 rettighet,rett,0.9107142857142857
@@ -21627,7 +21560,7 @@ lovede,lova,0.8571428571428571
 tidligst,tidlegast,0.9775910364145658
 fargesprakende,fargesprakande,1.0
 snøt,snytte,1.0
-bristepunkt,eit,1.0
+bristepunkt,oslo,1.0
 seksjoner,seksjonar,0.8666666666666667
 utslagene,utslaga,0.9117647058823529
 graverende,graverande,0.8846153846153846
@@ -21747,7 +21680,6 @@ covid--symptomer,covid--symptom,1.0
 strømsjokk,straumsjokk,1.0
 kirkeansatte,kyrkjetilsette,0.9
 forestillingene,framsyningane,0.9
-sugd,inn,0.5454545454545454
 epostsvindel,e-postsvindel,0.8333333333333334
 forkjølelse,forkjøling,0.9540229885057471
 sultestreik,sveltestreik,1.0
@@ -21814,7 +21746,7 @@ usmakelig,usmakeleg,1.0
 usikkerhetsmoment,usikkerheitsmoment,0.9545454545454546
 etterforskningsledelsen,etterforskingsleiinga,1.0
 skihopperne,skihopparane,1.0
-løchsen,ved,1.0
+løchsen,kulturhistorisk,1.0
 lima-gruppen,lima-gruppa,1.0
 kunsthistorien,kunsthistoria,1.0
 avløpsledninger,avløpsleidningar,1.0
@@ -22061,7 +21993,6 @@ loset,gjennom,0.6
 polarområdene,polarområda,1.0
 losen,lsen,0.75
 tobakkspakningene,tobakkspakningane,0.8
-twitter-innlegg,eit,0.6666666666666666
 merdene,merdane,1.0
 slepes,slepast,0.5625
 oljeplattformen,oljeplattforma,1.0
@@ -22074,10 +22005,8 @@ rekkehuset,rekkjehuset,0.75
 vietnamesere,vietnamesarar,0.8571428571428571
 problemer,problem,0.9579256360078278
 avgir,gir,0.6
-tomotors,eit,1.0
 årsregnskapet,årsrekneskapen,0.8666666666666667
 drivere,drivarar,0.8888888888888888
-snøoverbygg,eit,0.875
 oppfordringer,oppmodingar,0.5333333333333333
 oppfordringen,oppmodinga,0.6971153846153846
 urent,ureint,0.8888888888888888
@@ -22879,7 +22808,7 @@ stemland,mrer,1.0
 nettleie,nettleige,0.9557522123893806
 vannprøver,vassprøvar,0.7142857142857143
 kaldeste,kaldaste,0.96875
-bilde,eit,0.7836691410392365
+bilde,bilete,0.6383881230116649
 etterretningslov,ny,0.8
 tredelingen,tredelinga,0.9545454545454546
 biler,bilar,0.9654377880184332
@@ -22966,7 +22895,7 @@ krysning,kryssing,0.625
 krisesamtaler,krisesamtalar,1.0
 intensivinnlagte,intensivinnlagde,1.0
 hovedorganisasjonen,hovudorganisasjonen,0.7927927927927928
-forstørrelsesglass,eit,1.0
+forstørrelsesglass,forstørringsglas,0.5714285714285714
 pleksiglass,pleksiglas,1.0
 setrene,setrane,0.9
 ikke-vestlig,ikkje-vestleg,1.0
@@ -23006,7 +22935,6 @@ luftveissykdom,luftvegssjukdom,1.0
 nabokommuner,nabokommunar,0.782608695652174
 energimarkedene,energimarknadene,0.75
 mediemangfoldet,mediemangfaldet,1.0
-ublidt,eit,1.0
 skaperverket,skaparverket,1.0
 bomskudd,bomskot,1.0
 skadelige,skadelege,0.9558823529411765
@@ -23114,7 +23042,7 @@ witsø,rafoss,1.0
 utenriksminister,utanriksminister,0.960435212660732
 påstigning,påstiging,0.8
 skjønnsmidlene,kommunane,0.5714285714285714
-foregangsland,eit,0.9
+foregangsland,føregangsland,0.9
 matsystemer,matsystem,1.0
 fjerningen,fjerninga,1.0
 sikkerhetspolitisk,tryggingspolitisk,0.5714285714285714
@@ -23238,7 +23166,7 @@ knivene,knivane,1.0
 forskjellsbehandlingen,forskjellsbehandlinga,0.8181818181818182
 varsom-plakatens,ver,0.9444444444444444
 matbutikker,matbutikkar,0.9333333333333333
-veggmaleri,eit,1.0
+veggmaleri,veggmåleri,0.8333333333333334
 stafettseier,stafettsiger,0.8571428571428571
 julelysene,julelysa,0.6666666666666666
 selvutnevnte,sjølvutnemnde,0.8
@@ -23545,7 +23473,6 @@ koronamillioner,koronamillionar,0.8
 stekende,steikjande,1.0
 bortføringer,bortføringar,0.9130434782608695
 bortføringen,bortføringa,0.9777777777777777
-pionerprosjekt,eit,1.0
 betrakte,vurdere,0.6086956521739131
 mr-bilder,mr-bilete,0.8571428571428571
 innrettes,innrettast,0.7058823529411765
@@ -23954,7 +23881,6 @@ svetter,sveittar,1.0
 scenarioer,scenario,0.9369369369369369
 sakens,saka,0.7735849056603774
 smitteforebyggende,smitteførebyggjande,1.0
-nødskrik,eit,1.0
 vanlig,vanleg,0.9826646854878652
 valutakurser,valutakursar,1.0
 evakuert,evakuerte,0.6026490066225165
@@ -24008,7 +23934,6 @@ skadd,skadde,0.5267210144927537
 fremfor,framfor,0.9451476793248945
 innbydende,innbydande,0.8571428571428571
 høyreekstreme,høgreekstreme,0.9857142857142858
-knippe,eit,0.989247311827957
 drømmemila,draumemila,1.0
 høyreekstremt,høgreekstremt,0.9259259259259259
 ansettelsene,tilsetjingane,0.6666666666666666
@@ -24164,7 +24089,6 @@ sinnssyk,sinnssjuk,1.0
 havnearbeidere,hamnearbeidarar,0.8571428571428571
 arbeidstakerorganisasjon,arbeidstakarorganisasjon,1.0
 kostra-tallene,kostra-tala,1.0
-forbrytelse,eit,0.6875
 netthandlerne,netthandlarane,1.0
 minnegudstjeneste,minnegudsteneste,0.8620689655172413
 appelsiner,appelsinar,1.0
@@ -24192,7 +24116,6 @@ opphoggingen,opphogginga,1.0
 gråtkvalt,gråtkjøvd,0.8333333333333334
 fiskerinæringen,fiskerinæringa,0.9859154929577465
 statslederen,statsleiaren,1.0
-avfyres,eit,0.5714285714285714
 avfyrer,fyrer,0.6
 matmarkedet,matmarknaden,1.0
 rødrev,raudrev,0.8333333333333334
@@ -24304,7 +24227,6 @@ konkurransene,konkurransane,1.0
 underholdning,underhaldning,0.9603960396039604
 dødsbudskap,dødsbodskap,1.0
 f--fly,f-fly,0.7586206896551724
-vaksinasjonskort,eit,1.0
 luftfuktigheten,luftfukta,1.0
 småskolen,småskulen,1.0
 inneha,ha,1.0
@@ -24339,7 +24261,7 @@ nestleder,nestleiar,0.9516331658291457
 uvirkelige,uverkelege,1.0
 krisen,krisa,0.9654471544715447
 smittevernvennlig,smittevernvennleg,1.0
-gatekjøkken,eit,0.8
+gatekjøkken,oslo,0.6
 fartøyets,fartøyet,1.0
 krenket,krenkt,0.5633802816901409
 krenker,krenkjer,0.9090909090909091
@@ -25031,7 +24953,6 @@ ispigger,ispiggar,1.0
 strider,strir,0.6467065868263473
 ubetjente,ubetente,0.8571428571428571
 valgordningen,valordninga,1.0
-bekymringsbrev,eit,0.7142857142857143
 forventningsundersøkelse,noregs,1.0
 arbeidsmarkedsregioner,arbeidsmarknadsregionar,1.0
 jentenavnene,jentenamna,1.0
@@ -25146,7 +25067,7 @@ utilbørlig,utilbørleg,0.8148148148148148
 fagmedarbeider,fagmedarbeidar,1.0
 islamistbevegelsen,islamistrørsla,1.0
 nettotegnet,nettoteikna,1.0
-ømtålig,eit,0.8333333333333334
+ømtålig,tema,0.8333333333333334
 målungdom,norsk,1.0
 skrøt,skrytte,1.0
 venstrefløyen,venstrefløya,1.0
@@ -25712,7 +25633,6 @@ skatteregnskapet,skatterekneskapen,1.0
 adgang,tilgang,0.6666666666666666
 spydkasteren,spydkastaren,1.0
 thammarat,si,1.0
-rusproblem,eit,1.0
 toppturer,toppturar,1.0
 søvnvansker,søvnvanskar,1.0
 bedøvet,bedøvd,0.6
@@ -25825,8 +25745,7 @@ veis,ende,0.8333333333333334
 schjeldeprijs,scheldeprijs,1.0
 veie,vege,0.6641221374045801
 veid,vege,0.7575757575757576
-brannslukningsapparat,eit,1.0
-vell,eit,1.0
+brannslukningsapparat,brannsløkkingsapparat,1.0
 velg,vel,0.9607843137254902
 tilpasninger,tilpassingar,0.9302325581395349
 tilpasningen,tilpassinga,0.8571428571428571
@@ -25962,7 +25881,7 @@ radioer,radioar,1.0
 sparket,sparka,0.9223744292237442
 sparkes,gang,0.7241379310344828
 sparker,sparkar,0.9782608695652174
-læreplanmål,eit,0.8
+læreplanmål,berre,0.8
 grusomme,grufulle,0.8571428571428571
 avdekkede,avdekte,1.0
 landsted,landstad,0.8
@@ -26285,7 +26204,6 @@ skynder,skundar,1.0
 flyavgiften,flyavgifta,1.0
 basistilskuddet,basistilskotet,1.0
 dype,djupe,0.9565217391304348
-trafikklyssystem,eit,1.0
 hjemstaten,heimstaten,1.0
 dypt,djupt,0.9695550351288056
 sjåførene,sjåførane,0.975609756097561
@@ -26525,7 +26443,6 @@ uopprettelige,uopprettelege,1.0
 inntrufne,beklagar,0.7
 spådommene,spådommane,0.8888888888888888
 fabiano,caruana,1.0
-knepp,eit,1.0
 blekner,bleiknar,1.0
 klassene,klassane,0.7777777777777778
 nrk-tomten,nrk-tomta,1.0
@@ -26780,7 +26697,7 @@ skattelettelsen,skatteletten,0.6666666666666666
 rhode,island,1.0
 elevenes,elevane,0.8490566037735849
 ransakelser,ransakingar,1.0
-femsifret,eit,1.0
+femsifret,femsifra,0.9166666666666666
 programmene,programma,0.984375
 stevie,wonder,1.0
 kystområder,kystområde,0.8
@@ -27338,7 +27255,7 @@ hetebølge,hetebølgje,0.7228915662650602
 vendinger,vendingar,1.0
 ifjor,fjor,1.0
 vendingen,vendinga,1.0
-innkalte,inn,0.5555555555555556
+innkalte,kalla,0.5333333333333333
 kvarters,etter,0.8
 produksjonstilskudd,produksjonstilskot,1.0
 kjønnslemlestelse,kjønnslemlesting,1.0
@@ -27506,7 +27423,7 @@ utsatt,utsett,0.6776277157956547
 rasutsatte,rasutsette,0.9523809523809523
 kongeparets,kongeparet,0.5909090909090909
 vaksinering,vaksinasjon,0.956140350877193
-annerledesland,eit,0.8333333333333334
+annerledesland,noreg,0.8333333333333334
 forbudte,forbodne,0.9384615384615385
 pengelisten,pengelista,1.0
 pågrepne,arresterte,0.936
@@ -27713,7 +27630,7 @@ hjemmeeksamener,heimeeksamenar,1.0
 tshawe,baqwa,1.0
 kriminaletterforskning,kriminaletterforsking,1.0
 salgsdirektør,salsdirektør,1.0
-ekspropriasjonsrettslige,ekspropriasjonsrettslege,0.7777777777777778
+ekspropriasjonsrettslige,prinsipp,0.7777777777777778
 deltakerloven,deltakarlova,1.0
 resolusjoner,resolusjonar,0.875
 landbruksstøtten,landbruksstøtta,1.0
@@ -27778,7 +27695,6 @@ målretter,målrettar,0.8333333333333334
 gaveinntekter,gåveinntekter,0.7777777777777778
 partiledelsens,partileiinga,1.0
 påtalemakten,påtalemakta,1.0
-aspekt,eit,1.0
 aktoratets,aktoratet,0.7
 pasienter,pasientar,0.9877008032128514
 selvforsyningsgrad,sjølvforsyningsgrad,1.0
@@ -28036,7 +27952,6 @@ profesjonsutdanninger,profesjonsutdanningar,1.0
 lied-utvalget,lied-utvalet,1.0
 mobiler,mobilar,0.8823529411764706
 aktivitetstilbud,aktivitetstilbod,1.0
-uranmetall,iran,1.0
 vinder,vindar,0.8421052631578947
 tv-tall,tv-tal,0.7333333333333333
 drosjemarkedet,drosjemarknaden,1.0
@@ -28213,7 +28128,6 @@ lakseelver,norske,0.8333333333333334
 byregjeringen,byregjeringa,0.8888888888888888
 finansselskaper,finansselskap,1.0
 misfornøyd,misnøgd,0.5053191489361702
-blunk,eit,1.0
 utfasingen,utfasinga,1.0
 utenlandsreiser,utanlandsreiser,0.985
 letearealer,leiteareal,1.0
@@ -28374,7 +28288,6 @@ pairer,au,1.0
 pairen,au,1.0
 påkostet,påkosta,1.0
 sms-ene,sms-ane,0.8571428571428571
-nettotap,eit,1.0
 utbetalingene,utbetalingane,0.9810126582278481
 kommunalkomit,stortingets,1.0
 teknisk-naturvitenskapelige,universitet,0.9666666666666667
@@ -28471,7 +28384,6 @@ sosialhjelpen,sosialhjelpa,1.0
 sommertemperaturene,sommartemperaturane,1.0
 kontantstrøm,kontantstraum,0.9393939393939394
 forberedelse,førebuing,0.8823529411764706
-kjernespørsmål,eit,1.0
 tilgjengeliggjort,tilgjengeleg,0.6
 tenåringer,tenåringar,1.0
 glærum,guro,1.0
@@ -28524,7 +28436,7 @@ ulsberg,e,1.0
 etterkrigskullene,etterkrigskulla,1.0
 depresjonssymptomer,depresjonssymptom,0.875
 meningspoliti,meiningspoliti,1.0
-letjennaflokken,eit,1.0
+letjennaflokken,felle,0.8
 høyere,høgare,0.9724580267873986
 høyest,høgast,0.937332139659803
 ydmyket,audmjuka,0.9333333333333333
@@ -28702,6 +28614,7 @@ ufortjent,ufortent,0.7272727272727273
 ntb-frode,npk-ntb,0.8461538461538461
 berusede,rusa,0.9444444444444444
 verdsatt,verdsett,0.9333333333333333
+energinasjon,noreg,1.0
 fortrolige,fortrulege,0.8571428571428571
 dybdeintervjuer,djupneintervju,0.6666666666666666
 nåløyet,nålauget,0.65625
@@ -28754,3 +28667,5 @@ hvor,kor,1
 noen,nokon,1
 man,ein,1
 dem,dei,1
+kommer,kjem,1
+ble,vart,1

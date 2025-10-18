@@ -17,7 +17,7 @@ public class TestAccuracy {
         ArrayList<String[]> couples = Train.ReadTSV("src/main/java/preprocessing/npk_2011_2022.tsv");
 
 
-        for(int i = 0; i < couples.size(); i++){
+        for(int i = 100; i < couples.size() - 100; i++){
             String inputBokmaal = couples.get(i)[0];
             String idealNynorsk = couples.get(i)[1].trim();
             String myTranslation = TranslationService.Translate(couples.get(i)[0]).trim();

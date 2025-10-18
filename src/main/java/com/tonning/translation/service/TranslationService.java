@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 import static java.lang.Character.isUpperCase;
 import static java.lang.Character.toUpperCase;
@@ -35,7 +36,11 @@ public class TranslationService {
 
                 // We also need to check that the word is a noun, because some verbs get s-endings
                 // There are also some hard coded checks for words that pass the checks but shouldn't
-                if (names.contains(unpossessiveWord) || (wordList.containsKey(unpossessiveWord) && Objects.equals(wordList.get(unpossessiveWord)[2], "NOUN") && !word.equals("oss") && !word.equals("mens"))) {
+                Set<String> dangerousSWords = Set.of(
+                        "oss", "mens", "ras", "integrerings", "moss"
+                );
+                if (names.contains(unpossessiveWord) || (wordList.containsKey(unpossessiveWord) && Objects.equals(wordList.get(unpossessiveWord)[2], "NOUN")
+                        && !dangerousSWords.contains(word))) {
                     word = RemovePossessive(unpossessiveWord, inputArray, wordIndex, wordList, translations);
                     inputArray[wordIndex] = word;
                 }

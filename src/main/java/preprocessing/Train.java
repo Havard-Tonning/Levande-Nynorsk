@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
+import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Train {
@@ -94,7 +95,6 @@ public class Train {
                 }
 
                 // Splitting on tabs. The TSV has three values. We ignore the first one, which is metadata
-
                 String[] row = line.split("\t");
                 if(row.length >= 3) {
                     String[] pair = new String[2];
@@ -121,56 +121,18 @@ public class Train {
         HashMap<String, Integer> appearanceMap = new HashMap<String, Integer>();
 
         // Words that appear frequently and mess up the translation
-        ArrayList<String> bannedWords = new ArrayList<String>();
-        bannedWords.add("og");
-        bannedWords.add("til");
-        bannedWords.add("å");
-        bannedWords.add("han");
-        bannedWords.add("ho");
-        bannedWords.add("det");
-        bannedWords.add("som");
-        bannedWords.add("i");
-        bannedWords.add("med");
-        bannedWords.add("har");
-        bannedWords.add("mot");
-        bannedWords.add("skal");
-        bannedWords.add("du");
-        bannedWords.add("den");
-        bannedWords.add("for");
-        bannedWords.add("på");
-        bannedWords.add("meg");
-        bannedWords.add("gud");
-        bannedWords.add("ikkje");
-        bannedWords.add("dei");
-        bannedWords.add("deg");
-        bannedWords.add("de");
-        bannedWords.add("eg");
-        bannedWords.add("av");
-        bannedWords.add("men");
-        bannedWords.add("var");
-        bannedWords.add("så");
-        bannedWords.add("frå");
-        bannedWords.add("når");
-        bannedWords.add("seg");
-        bannedWords.add("er");
-        bannedWords.add("må");
-        bannedWords.add("då");
-        bannedWords.add("ein");
-        bannedWords.add("sa");
-        bannedWords.add("vart");
-        bannedWords.add("ei");
-        bannedWords.add("om");
-        bannedWords.add("blir");
-        bannedWords.add("at");
-        bannedWords.add("kjem");
-        bannedWords.add("eit");
+        Set<String> bannedWords = Set.of(
+                "og", "til", "å", "han", "ho", "det", "som", "i", "med", "har",
+                "mot", "skal", "du", "den", "for", "på", "meg", "gud", "ikkje",
+                "dei", "deg", "de", "eg", "av", "men", "var", "så", "frå",
+                "når", "seg", "er", "må", "då", "ein", "sa", "vart", "ei",
+                "om", "blir", "at", "kjem", "eit", "inn"
+        );
 
 
             String textHolder = "";
         String[] sentenceA = {};
         String[] sentenceB = {};
-
-        int tempCounter = 0; //*****
 
         // Process all couples in the ArrayList
         for (int i = 0; i < couples.size(); i++) {
@@ -211,8 +173,6 @@ public class Train {
                     if (bannedWords.contains(sentenceB[k])) {
                         continue;
                     }
-                    tempCounter++; // ******
-                    System.out.println(tempCounter); ///*******
                     // If the aWord does not already exist as a key in the outer map, create a mapping with aWord, bWord and 1
                     if (!outerMap.containsKey(sentenceA[j]) && !addedWords.contains(sentenceB[k])) {
                         HashMap<String, Integer> innerMap = new HashMap<>();
@@ -288,8 +248,8 @@ public class Train {
 
     public static void AppendBannedWords(){
         try (FileWriter writer = new FileWriter("src/main/java/preprocessing/translation.csv", true)) {
-            String[] aWords = {"jeg", "også", "hun", "ham", "ikke", "de", "dere", "fra", "da", "en", "et", "hvor", "noen", "man", "dem", "kommer"};
-            String[] bWords = {"eg", "òg", "ho", "han", "ikkje", "dei", "dykk", "frå", "då", "ein", "eit", "kor", "nokon", "ein", "dei", "kjem"};
+            String[] aWords = {"jeg", "også", "hun", "ham", "ikke", "de", "dere", "fra", "da", "en", "et", "hvor", "noen", "man", "dem", "kommer", "ble"};
+            String[] bWords = {"eg", "òg", "ho", "han", "ikkje", "dei", "dykk", "frå", "då", "ein", "eit", "kor", "nokon", "ein", "dei", "kjem", "vart"};
 
             for(int i = 0; i < aWords.length; i++){
                 writer.append(aWords[i] + "," + bWords[i] + ",1\n");

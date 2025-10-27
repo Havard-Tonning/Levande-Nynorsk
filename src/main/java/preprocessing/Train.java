@@ -46,7 +46,7 @@ public class Train {
         boolean inQuotes = false;
 
         while ((part = reader.readLine()) != null) {
-            if (line.length() > 0) {
+            if (!line.isEmpty()) {
                 line.append("\n");
             }
             line.append(part);
@@ -126,8 +126,8 @@ public class Train {
                 "mot", "skal", "du", "den", "for", "på", "meg", "gud", "ikkje",
                 "dei", "deg", "de", "eg", "av", "men", "var", "så", "frå",
                 "når", "seg", "er", "må", "då", "ein", "sa", "vart", "ei",
-                "om", "blir", "at", "kjem", "eit", "inn"
-        );
+                "om", "blir", "at", "kjem", "eit", "inn", "norsk"
+                );
 
 
             String textHolder = "";
@@ -213,21 +213,34 @@ public class Train {
                 final AtomicInteger[] maxCount = {new AtomicInteger(0)};
                 final String[] bestTranslation = {""};
 
+                final AtomicInteger[] secondMaxCount = {new AtomicInteger(0)};
+                final String[] secondBestTranslation = {""};
+
                 matches.forEach((bWord, occurs) -> {
                     if (occurs > maxCount[0].get()) {
+                        secondMaxCount[0].set(maxCount[0].get());
+                        secondBestTranslation[0] = bestTranslation[0];
+
                         maxCount[0].set(occurs);
                         bestTranslation[0] = bWord;
+                    } else if (occurs > secondMaxCount[0].get()) {
+                        secondMaxCount[0].set(occurs);
+                        secondBestTranslation[0] = bWord;
                     }
-
                 });
 
-                if (bestTranslation[0] != "" && appearanceMap.get(aWord) != null) {
+                if (!Objects.equals(bestTranslation[0], "") && appearanceMap.get(aWord) != null) {
                     /*
-                    If the left word appears more than once in the text, and the co-occurrence probability is more than 0,5
-                    Also prunes out words that are the same in both languages
+                    If the left word appears more than three times in the text, and the co-occurrence probability is more than 0,5
+                    Also prunes out words that are the same in both languages and cases where the top two translations are equally likely
                      */
                     double probability = (double) outerMap.get(aWord).get(bestTranslation[0]) / appearanceMap.get(aWord);
-                    if (appearanceMap.get(aWord) > 4 && probability > 0.5 && !Objects.equals(aWord, bestTranslation[0])) {
+                    double secondProbability = 0;
+                    if (!secondBestTranslation[0].isEmpty() && outerMap.get(aWord).get(secondBestTranslation[0]) != null) {
+                        secondProbability = (double) outerMap.get(aWord).get(secondBestTranslation[0]) / appearanceMap.get(aWord);
+                    }
+
+                    if (appearanceMap.get(aWord) > 3 && probability > 0.5 && !Objects.equals(aWord, bestTranslation[0]) && secondProbability != probability) {
                         try {
                             writer.append(aWord + "," + bestTranslation[0] + "," + probability + "\n");
                         } catch (IOException e) {
@@ -248,8 +261,8 @@ public class Train {
 
     public static void AppendBannedWords(){
         try (FileWriter writer = new FileWriter("src/main/java/preprocessing/translation.csv", true)) {
-            String[] aWords = {"jeg", "også", "hun", "ham", "ikke", "de", "dere", "fra", "da", "en", "et", "hvor", "noen", "man", "dem", "kommer", "ble"};
-            String[] bWords = {"eg", "òg", "ho", "han", "ikkje", "dei", "dykk", "frå", "då", "ein", "eit", "kor", "nokon", "ein", "dei", "kjem", "vart"};
+            String[] aWords = {"jeg", "også", "hun", "ham", "ikke", "de", "dere", "fra", "da", "en", "et", "hvor", "noen", "man", "dem", "kommer", "ble", "sendes", "hvorav"};
+            String[] bWords = {"eg", "òg", "ho", "han", "ikkje", "dei", "dykk", "frå", "då", "ein", "eit", "kor", "nokon", "ein", "dei", "kjem", "vart", "sendast", "kor"};
 
             for(int i = 0; i < aWords.length; i++){
                 writer.append(aWords[i] + "," + bWords[i] + ",1\n");

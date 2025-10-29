@@ -40,7 +40,9 @@ public class TranslationService {
                         "integrerings", "telles", "prosents", "tredels", "års"
                 );
                 if(!dangerousSWords.contains(word) && !wordList.containsKey(word) && !names.contains(word)) {
-                    if (names.contains(unpossessiveWord) || (wordList.containsKey(unpossessiveWord) && Objects.equals(wordList.get(unpossessiveWord)[2], "NOUN"))){
+                    System.out.println("Passed check one");
+                    if (names.contains(unpossessiveWord) || (wordList.containsKey(unpossessiveWord))){
+                        System.out.println("Passed check two");
                         word = RemovePossessive(unpossessiveWord, inputArray, wordIndex, wordList, translations);
                         inputArray[wordIndex] = word;
                     }
@@ -146,6 +148,8 @@ public class TranslationService {
     based on the gender of the first following noun.
      */
     private static String RemovePossessive(String currentWord, String[] inputArray, int wordIndex, HashMap<String, String[]> wordList, HashMap<String, String> translations) {
+        System.out.println("In remove possessive");
+
         String nextWord;
         String gender = "na";
 
@@ -176,6 +180,7 @@ public class TranslationService {
         }
         // If the sentence is incomplete and has no noun after the possessive, we ignore it and move on.
         else{
+            System.out.println("Else has been triggered");
             return currentWord;
         }
     }

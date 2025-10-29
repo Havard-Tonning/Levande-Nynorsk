@@ -241,10 +241,18 @@ public class Train {
                     }
 
                     if (appearanceMap.get(aWord) > 3 && probability > 0.5 && !Objects.equals(aWord, bestTranslation[0]) && secondProbability != probability) {
-                        try {
-                            writer.append(aWord + "," + bestTranslation[0] + "," + probability + "\n");
-                        } catch (IOException e) {
-                            throw new RuntimeException(e);
+
+                        // Prevent possessive s to be written to dictionary
+                        if (aWord.endsWith("s") && aWord.length() > 2) {
+                            String withoutS = aWord.substring(0, aWord.length() - 1);
+                            if (!bestTranslation[0].equals(withoutS)) {
+                                try {
+                                    writer.append(aWord).append(",").append(bestTranslation[0]).append(",").append(String.valueOf(probability)).append("\n");
+                                } catch (
+                                        IOException e) {
+                                    throw new RuntimeException(e);
+                                }
+                            }
                         }
 
                         System.out.println(lineCounter + " Best translation for " + aWord + " is " + bestTranslation[0] + " with probability " + probability);

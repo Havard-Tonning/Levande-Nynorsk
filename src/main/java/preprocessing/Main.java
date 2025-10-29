@@ -12,10 +12,9 @@ public class Main {
 //
 //       ArrayList<String[]> couples2 = Train.ReadTSV("src/main/java/preprocessing/npk_2011_2022.tsv");
 //       System.out.println("Loaded " + couples2.size() + " pairs from TSV");
-//
-//        Train.generateTranslation(couples2);
+//       Train.generateTranslation(couples2);
 
-        System.out.println(TranslationService.Translate("Kom her, den store gutten min."));
+        System.out.println(TranslationService.Translate("Han har musikkhistoriens største katt."));
 //     new CreateDict();
 
      //   new TestAccuracy();

@@ -40,9 +40,7 @@ public class TranslationService {
                         "integrerings", "telles", "prosents", "tredels", "års"
                 );
                 if(!dangerousSWords.contains(word) && !wordList.containsKey(word) && !names.contains(word)) {
-                    System.out.println("Passed check one");
                     if (names.contains(unpossessiveWord) || (wordList.containsKey(unpossessiveWord))){
-                        System.out.println("Passed check two");
                         word = RemovePossessive(unpossessiveWord, inputArray, wordIndex, wordList, translations);
                         inputArray[wordIndex] = word;
                     }

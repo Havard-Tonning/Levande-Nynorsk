@@ -56,7 +56,8 @@ public class Train {
                 "mot", "skal", "du", "den", "for", "på", "meg", "gud", "ikkje",
                 "dei", "deg", "de", "eg", "av", "men", "var", "så", "frå",
                 "når", "seg", "er", "må", "då", "ein", "sa", "vart", "ei",
-                "om", "blir", "at", "kjem", "eit", "inn", "norsk", "noreg"
+                "om", "blir", "at", "kjem", "eit", "inn", "norsk", "noreg",
+                "noregs", "norge", "fôr", "kan", "vil"
                 );
 
 
@@ -68,12 +69,12 @@ public class Train {
         for (String[] couple : couples) {
             // The input, where each sentence is an item in the array, gets converted to where each word is an item in the array for easier iteration
             if (couple[0] != null) {
-                textHolder = couple[0].toLowerCase().replaceAll("[^a-zA-Zæøåòèê\\s-]", "");
+                textHolder = couple[0].toLowerCase().replaceAll("[^a-zA-Zæøåòôèê\\s-]", "");
                 sentenceA = textHolder.split("[ \n]");
             }
 
             if (couple[1] != null) {
-                textHolder = couple[1].toLowerCase().replaceAll("[^a-zA-Zæøåòèê\\s-]", "");
+                textHolder = couple[1].toLowerCase().replaceAll("[^a-zA-Zæøåòôèê\\s-]", "");
                 sentenceB = textHolder.split("[ \n]");
             }
 
@@ -203,8 +204,8 @@ public class Train {
 
     public static void AppendBannedWords(){
         try (FileWriter writer = new FileWriter("src/main/java/preprocessing/translation.csv", true)) {
-            String[] aWords = {"jeg", "også", "hun", "ham", "ikke", "de", "dere", "fra", "da", "en", "et", "hvor", "noen", "man", "dem", "kommer", "ble", "sendes", "hvorav", "verdenskrig", "norge", "enten"};
-            String[] bWords = {"eg", "òg", "ho", "han", "ikkje", "dei", "dykk", "frå", "då", "ein", "eit", "kor", "nokon", "ein", "dei", "kjem", "vart", "sendast", "kor", "verdskrig", "noreg", "anten"};
+            String[] aWords = {"jeg", "også", "hun", "ham", "ikke", "de", "dere", "fra", "da", "en", "et", "hvor", "noen", "man", "dem", "kommer", "ble", "sendes", "hvorav", "verdenskrig", "verdenskrigen","norge", "enten"};
+            String[] bWords = {"eg", "òg", "ho", "han", "ikkje", "dei", "dykk", "frå", "då", "ein", "eit", "kor", "nokon", "ein", "dei", "kjem", "vart", "sendast", "kor", "verdskrig", "verdskrigen","noreg", "anten"};
 
             for(int i = 0; i < aWords.length; i++){
                 writer.append(aWords[i] + "," + bWords[i] + ",1\n");

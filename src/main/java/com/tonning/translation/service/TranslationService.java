@@ -108,6 +108,8 @@ public class TranslationService {
                     continue;
                 }
 
+                line = line.toLowerCase();
+
                 String[] words = line.trim().split(",");
 
                 // Technically this means that the first word will be duplicated, but it is done like this for simplicity

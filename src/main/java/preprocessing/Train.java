@@ -56,7 +56,7 @@ public class Train {
                 "mot", "skal", "du", "den", "for", "på", "meg", "gud", "ikkje",
                 "dei", "deg", "de", "eg", "av", "men", "var", "så", "frå",
                 "når", "seg", "er", "må", "då", "ein", "sa", "vart", "ei",
-                "om", "blir", "at", "kjem", "eit", "inn", "norsk"
+                "om", "blir", "at", "kjem", "eit", "inn", "norsk", "noreg"
                 );
 
 
@@ -168,7 +168,7 @@ public class Train {
                         secondProbability = (double) outerMap.get(aWord).get(secondBestTranslation[0]) / appearanceMap.get(aWord);
                     }
 
-                    if (appearanceMap.get(aWord) > 3 && probability > 0.5 && !Objects.equals(aWord, bestTranslation[0]) && secondProbability != probability) {
+                    if (appearanceMap.get(aWord) > 2 && probability > 0.5 && !Objects.equals(aWord, bestTranslation[0]) && secondProbability != probability) {
 
                         // Prevent possessive s to be written to dictionary
                         if (aWord.endsWith("s") && aWord.length() > 2) {
@@ -203,8 +203,8 @@ public class Train {
 
     public static void AppendBannedWords(){
         try (FileWriter writer = new FileWriter("src/main/java/preprocessing/translation.csv", true)) {
-            String[] aWords = {"jeg", "også", "hun", "ham", "ikke", "de", "dere", "fra", "da", "en", "et", "hvor", "noen", "man", "dem", "kommer", "ble", "sendes", "hvorav"};
-            String[] bWords = {"eg", "òg", "ho", "han", "ikkje", "dei", "dykk", "frå", "då", "ein", "eit", "kor", "nokon", "ein", "dei", "kjem", "vart", "sendast", "kor"};
+            String[] aWords = {"jeg", "også", "hun", "ham", "ikke", "de", "dere", "fra", "da", "en", "et", "hvor", "noen", "man", "dem", "kommer", "ble", "sendes", "hvorav", "verdenskrig", "norge", "enten"};
+            String[] bWords = {"eg", "òg", "ho", "han", "ikkje", "dei", "dykk", "frå", "då", "ein", "eit", "kor", "nokon", "ein", "dei", "kjem", "vart", "sendast", "kor", "verdskrig", "noreg", "anten"};
 
             for(int i = 0; i < aWords.length; i++){
                 writer.append(aWords[i] + "," + bWords[i] + ",1\n");

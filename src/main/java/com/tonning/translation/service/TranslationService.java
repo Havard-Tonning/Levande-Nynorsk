@@ -108,8 +108,6 @@ public class TranslationService {
                     continue;
                 }
 
-                line = line.toLowerCase();
-
                 String[] words = line.trim().split(",");
 
                 // Technically this means that the first word will be duplicated, but it is done like this for simplicity
@@ -155,7 +153,7 @@ public class TranslationService {
 
         // We loop through to find the noun. The noun is never more than a coule of positions away. By setting a limit, we ensure O(1) instead of O(n)
         for(int n = wordIndex + 1; n < inputArray.length && n <= wordIndex + 4; n++){
-            nextWord = inputArray[n];
+            nextWord = inputArray[n].toLowerCase();
             if(wordList.containsKey(nextWord)) {
                 if (!Objects.equals(wordList.get(nextWord)[3], "na")) {
                     if(nextWord.endsWith("er"))
@@ -181,7 +179,7 @@ public class TranslationService {
         // If the sentence is incomplete and has no noun after the possessive, we ignore it and move on.
         else{
             System.out.println("Else has been triggered");
-            return currentWord;
+            return currentWord + "s";
         }
     }
 

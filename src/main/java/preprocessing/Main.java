@@ -10,7 +10,7 @@ public class Main {
 //       System.out.println("Loaded " + couples.size() + " pairs from TSV");
 //       Train.GenerateTranslation(couples);
 
-        System.out.println(TranslationService.Translate("Tronstad ble høyt dekorert for sin innsats under den andre verdenskrigen."));
+        System.out.println(TranslationService.Translate("Norge tekniske høgskole"));
 
 //        new TestAccuracy();
     }

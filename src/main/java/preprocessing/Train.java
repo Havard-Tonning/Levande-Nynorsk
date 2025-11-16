@@ -57,7 +57,7 @@ public class Train {
                 "dei", "deg", "de", "eg", "av", "men", "var", "så", "frå",
                 "når", "seg", "er", "må", "då", "ein", "sa", "vart", "ei",
                 "om", "blir", "at", "kjem", "eit", "inn", "norsk", "noreg",
-                "noregs", "norge", "fôr", "kan", "vil"
+                "noregs", "norge", "fôr", "kan", "vil", "fortsetter", "forsette"
                 );
 
 
@@ -204,8 +204,10 @@ public class Train {
 
     public static void AppendBannedWords(){
         try (FileWriter writer = new FileWriter("src/main/java/preprocessing/translation.csv", true)) {
-            String[] aWords = {"jeg", "også", "hun", "ham", "ikke", "de", "dere", "fra", "da", "en", "et", "hvor", "noen", "man", "dem", "kommer", "ble", "sendes", "hvorav", "verdenskrig", "verdenskrigen","Norge", "enten"};
-            String[] bWords = {"eg", "òg", "ho", "han", "ikkje", "dei", "dykk", "frå", "då", "ein", "eit", "kor", "nokon", "ein", "dei", "kjem", "vart", "sendast", "kor", "verdskrig", "verdskrigen","Noreg", "anten"};
+            String[] aWords = {"jeg", "også", "hun", "ham", "ikke", "de", "dere", "fra", "da", "en", "et", "hvor", "noen", "man", "dem", "kommer", "ble",
+                    "sendes", "hvorav", "verdenskrig", "verdenskrigen","Norge", "enten", "forsetter", "åringer"};
+            String[] bWords = {"eg", "òg", "ho", "han", "ikkje", "dei", "dykk", "frå", "då", "ein", "eit", "kor", "nokon", "ein",
+                    "dei", "kjem", "vart", "sendast", "kor", "verdskrig", "verdskrigen","Noreg", "anten", "held fram", "åringar"};
 
             for(int i = 0; i < aWords.length; i++){
                 writer.append(aWords[i] + "," + bWords[i] + ",1\n");

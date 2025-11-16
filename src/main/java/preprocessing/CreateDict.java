@@ -39,7 +39,7 @@ public class CreateDict {
         for (String word : wordSet) {
             counter++;
             System.out.println("\nWord " + counter + " of " + length + ". " + ((counter/length)*100) + "% done");
-                GetArticleNum(word);
+            GetArticleNum(word);
         }
     }
 
@@ -154,7 +154,6 @@ public class CreateDict {
         }
     }
 }
-
 
 
 

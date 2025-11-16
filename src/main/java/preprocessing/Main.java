@@ -10,8 +10,10 @@ public class Main {
 //       System.out.println("Loaded " + couples.size() + " pairs from TSV");
 //       Train.GenerateTranslation(couples);
 
-        System.out.println(TranslationService.Translate("Norge tekniske høgskole"));
+        System.out.println(TranslationService.Translate("Dette omgrepet hoppes over. "));
 
-//        new TestAccuracy();
+        new TestAccuracy();
+
+//        new CreateDict();
     }
 }

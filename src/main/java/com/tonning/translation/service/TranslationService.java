@@ -20,6 +20,7 @@ public class TranslationService {
     public static String Translate(String input) {
         HashSet<String> names = ReadNames();
         HashMap<String, String[]> wordList = ReadDict();
+        HashMap<String, String> nnPresentPast = ReadNNDict();
         String currentWord;
         StringBuilder finalSentence = new StringBuilder();
 
@@ -32,15 +33,15 @@ public class TranslationService {
 
             // If it ends in an s, it might be a possessive. To find out, we need to check if it is still a word (or name) when the s is removed
             if (word.charAt(word.length() - 1) == 's' && word.length() >= 2) {
-                String unpossessiveWord = word.substring(0,word.length() - 1);
+                String unpossessiveWord = word.substring(0, word.length() - 1);
 
                 // We also need to check that the word is a noun, because some verbs get s-endings
                 // There are also some hard coded checks for words that pass the checks but shouldn't
                 Set<String> dangerousSWords = Set.of(
                         "integrerings", "telles", "prosents", "tredels", "års"
                 );
-                if(!dangerousSWords.contains(word) && !wordList.containsKey(word) && !names.contains(word)) {
-                    if (names.contains(unpossessiveWord) || (wordList.containsKey(unpossessiveWord))){
+                if (!dangerousSWords.contains(word) && !wordList.containsKey(word) && !names.contains(word)) {
+                    if (names.contains(unpossessiveWord) || (wordList.containsKey(unpossessiveWord))) {
                         word = RemovePossessive(unpossessiveWord, inputArray, wordIndex, wordList, translations);
                         inputArray[wordIndex] = word;
                     }
@@ -52,24 +53,99 @@ public class TranslationService {
             Set<String> possessives = Set.of(
                     "min", "mi", "mitt", "din", "di", "ditt", "hans", "hennes", "vår", "vårt", "våres", "deres", "sin", "si", "sitt"
             );
-            if(possessives.contains(word.toLowerCase())){
+            if (possessives.contains(word.toLowerCase())) {
                 DelayPossessive(word, wordIndex, inputArray, wordList);
             }
             wordIndex++;
         }
 
-        for(String word : inputArray){
+
+        for (int i = 0; i < inputArray.length; i++){
+            String word = inputArray[i];
+
             boolean capital = isUpperCase(word.charAt(0));
 
-            currentWord = translations.getOrDefault(word.toLowerCase(), word); // If there is a match, it will be translated. If not, it will stay the same.
+            // Bokmål uses a synthetic passive, whereas Nynorsk uses periphrastic passive (hoppes in BM becomes vert hoppa in NN)
+            if (word.charAt(word.length() - 1) == 's') {
+                String core = word.substring(0, word.length() - 1);
 
-            if (capital) {
-                currentWord = toUpperCase(currentWord.charAt(0)) + currentWord.substring(1);
+                if (wordList.containsKey(core)) {
+                    if (Objects.equals(wordList.get(core)[2], "VERB")) {
+                        // Get the lemma of the BM word, translate the lemma to NN and then get the past participle version of the verb
+
+                        String lemma = wordList.get(core)[1];
+                        String nnLemma = translations.getOrDefault(lemma.toLowerCase(), lemma);
+                        String nnPeriphrastic = nnPresentPast.getOrDefault(nnLemma.toLowerCase(),nnLemma);
+
+                        if (capital) {
+                            nnPeriphrastic = toUpperCase(nnPeriphrastic.charAt(0)) + nnPeriphrastic.substring(1);
+                        }
+
+                        nnPeriphrastic = "vert " + nnPeriphrastic;
+                        finalSentence.append(nnPeriphrastic);
+                        continue;
+                    }
+                }
             }
 
-            finalSentence.append(currentWord);
+            if(word.equals("ein") || word.equals("ei") || word.equals("eit")){
+                for(int j = 2; j <=4; j+=2) {
+                    String nextWord = inputArray[j];
+                    if (wordList.containsKey(nextWord)) {
+                        if(!Objects.equals(wordList.get(nextWord)[3], "na")){
+                            // If the gender is equal, all is good
+                            String nnGender = nnPresentPast.get(translations.getOrDefault(nextWord, nextWord));
+                            String bmGender = wordList.get(nextWord)[3];
+                            if(!Objects.equals(bmGender, nnGender)){
+                                switch (nnGender){
+                                    case "Masc":
+                                        word = "ein";
+                                        break;
+                                    case "Fem":
+                                        word = "ei";
+                                        break;
+                                    case "Neuter":
+                                        word = "eit";
+                                        break;
+                                }
+                            }
+                        }
+
+                    }
+                }finalSentence.append(word);
+
+            }else{
+
+                currentWord = translations.getOrDefault(word.toLowerCase(), word); // If there is a match, it will be translated. If not, it will stay the same.
+
+                if (capital) {
+                    currentWord = toUpperCase(currentWord.charAt(0)) + currentWord.substring(1);
+                }
+
+                finalSentence.append(currentWord);
+            }
         }
-        return finalSentence.toString();
+            return finalSentence.toString();
+        }
+
+    private static HashMap<String, String> ReadNNDict() {
+        HashMap<String, String> nnDict = new HashMap<>();
+
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/main/java/preprocessing/NNDictionary.csv"))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (line.trim().isEmpty()) {
+                    continue;
+                }
+
+                String[] words = line.trim().split(",");
+
+                nnDict.put(words[0], words[3]);
+            }
+        } catch (IOException e) {
+            System.err.println("Error reading file: " + e.getMessage());
+        }
+        return nnDict;
     }
 
 
@@ -146,8 +222,6 @@ public class TranslationService {
     based on the gender of the first following noun.
      */
     private static String RemovePossessive(String currentWord, String[] inputArray, int wordIndex, HashMap<String, String[]> wordList, HashMap<String, String> translations) {
-        System.out.println("In remove possessive");
-
         String nextWord;
         String gender = "na";
 
@@ -178,7 +252,6 @@ public class TranslationService {
         }
         // If the sentence is incomplete and has no noun after the possessive, we ignore it and move on.
         else{
-            System.out.println("Else has been triggered");
             return currentWord + "s";
         }
     }
@@ -200,7 +273,6 @@ public class TranslationService {
         if(wordList.containsKey(noun)){
             // Double-checking that the word after the possessive is a noun
             if(!Objects.equals(wordList.get(noun)[2], "NOUN")){
-                System.out.println("Returning2");
                 return;
             }
 

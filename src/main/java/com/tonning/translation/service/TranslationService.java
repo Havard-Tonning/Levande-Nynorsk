@@ -19,7 +19,7 @@ public class TranslationService {
 
     public static String Translate(String input) {
         HashSet<String> names = ReadNames();
-        HashMap<String, String[]> wordList = ReadDict();
+        HashMap<String, String[]> dictionary = ReadDict();
         HashMap<String, String> nnPresentPast = ReadNNDict();
         HashMap<String, String> translations = ReadTranslations();
         String currentWord;
@@ -29,32 +29,31 @@ public class TranslationService {
 
         int wordIndex = 0;
         for (String word : inputArray) {
-            if(Objects.equals(word.strip(), ",") || Objects.equals(word.strip(), ".") || Objects.equals(word.strip(), "?") || Objects.equals(word.strip(), ""))
-                continue;
+
             // If it ends in an s, it might be a possessive. To find out, we need to check if it is still a word (or name) when the s is removed
             if (word.charAt(word.length() - 1) == 's' && word.length() >= 2) {
-                String unpossessiveWord = word.substring(0, word.length() - 1);
+
 
                 // We also need to check that the word is a noun, because some verbs get s-endings
                 // There are also some hard coded checks for words that pass the checks but shouldn't
                 Set<String> dangerousSWords = Set.of(
                         "integrerings", "telles", "prosents", "tredels", "års"
                 );
-                if (!dangerousSWords.contains(word) && !wordList.containsKey(word) && !names.contains(word)) {
-                    if (names.contains(unpossessiveWord) || (wordList.containsKey(unpossessiveWord))) {
-                        word = RemovePossessive(unpossessiveWord, inputArray, wordIndex, wordList, translations);
+
+                if (!dangerousSWords.contains(word) && !dictionary.containsKey(word) && !names.contains(word)) {
+                    String unpossessiveWord = word.substring(0, word.length() - 1);
+                    if (names.contains(unpossessiveWord) || (dictionary.containsKey(unpossessiveWord))) {
+                        word = RemovePossessive(unpossessiveWord, inputArray, wordIndex, dictionary, translations);
                         inputArray[wordIndex] = word;
                     }
                 }
-
             }
-
             // Possessives in Bokmål comes before the noun, in Nynorsk, it comes after, and the noun changes to the lemma form
             Set<String> possessives = Set.of(
                     "min", "mi", "mitt", "din", "di", "ditt", "hans", "hennes", "vår", "vårt", "våres", "deres", "sin", "si", "sitt"
             );
             if (possessives.contains(word.toLowerCase())) {
-                DelayPossessive(word, wordIndex, inputArray, wordList);
+                DelayPossessive(word, wordIndex, inputArray, dictionary);
             }
             wordIndex++;
         }
@@ -69,11 +68,11 @@ public class TranslationService {
             if (word.charAt(word.length() - 1) == 's') {
                 String core = word.substring(0, word.length() - 1);
 
-                if (wordList.containsKey(core)) {
-                    if (Objects.equals(wordList.get(core)[2], "VERB")) {
+                if (dictionary.containsKey(core)) {
+                    if (Objects.equals(dictionary.get(core)[2], "VERB")) {
                         // Get the lemma of the BM word, translate the lemma to NN and then get the past participle version of the verb
 
-                        String lemma = wordList.get(core)[1];
+                        String lemma = dictionary.get(core)[1];
                         String nnLemma = translations.getOrDefault(lemma.toLowerCase(), lemma);
                         String nnPeriphrastic = nnPresentPast.getOrDefault(nnLemma.toLowerCase(),nnLemma);
 
@@ -91,11 +90,11 @@ public class TranslationService {
             if(word.equals("ein") || word.equals("ei") || word.equals("eit")){
                 for(int j = 2; j <=4; j+=2) {
                     String nextWord = inputArray[j];
-                    if (wordList.containsKey(nextWord)) {
-                        if(!Objects.equals(wordList.get(nextWord)[3], "na")){
+                    if (dictionary.containsKey(nextWord)) {
+                        if(!Objects.equals(dictionary.get(nextWord)[3], "na")){
                             // If the gender is equal, all is good
                             String nnGender = nnPresentPast.get(translations.getOrDefault(nextWord, nextWord));
-                            String bmGender = wordList.get(nextWord)[3];
+                            String bmGender = dictionary.get(nextWord)[3];
                             if(!Objects.equals(bmGender, nnGender)){
                                 switch (nnGender){
                                     case "Masc":

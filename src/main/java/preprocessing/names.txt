@@ -14339,3 +14339,7 @@ Karimi
 Hatlestad
 Berhe
 Trump
+Google
+Apple
+Samsung
+Intel

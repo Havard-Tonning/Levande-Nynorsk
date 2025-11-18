@@ -12,7 +12,7 @@ public class Main {
 
         System.out.println(TranslationService.Translate("Dette omgrepet hoppes over. "));
 
-        new TestAccuracy();
+//        new TestAccuracy();
 
 //        new CreateDict();
     }

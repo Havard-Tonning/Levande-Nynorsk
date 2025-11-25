@@ -65,9 +65,8 @@ public class TranslationService {
             boolean capital = isUpperCase(word.charAt(0));
 
             // Bokmål uses a synthetic passive, whereas Nynorsk uses periphrastic passive (hoppes in BM becomes vert hoppa in NN)
-            if (word.charAt(word.length() - 1) == 's') {
+            if (word.charAt(word.length() - 1) == 's' && !word.equals("les") && !word.equals("felles") && !word.equals("tross")) {
                 String core = word.substring(0, word.length() - 1);
-
                 if (dictionary.containsKey(core)) {
                     if (Objects.equals(dictionary.get(core)[2], "VERB")) {
                         // Get the lemma of the BM word, translate the lemma to NN and then get the past participle version of the verb
@@ -80,7 +79,7 @@ public class TranslationService {
                             nnPeriphrastic = toUpperCase(nnPeriphrastic.charAt(0)) + nnPeriphrastic.substring(1);
                         }
 
-                        nnPeriphrastic = "vert " + nnPeriphrastic;
+                        nnPeriphrastic = "blir " + nnPeriphrastic;
                         finalSentence.append(nnPeriphrastic);
                         continue;
                     }
@@ -96,25 +95,18 @@ public class TranslationService {
                             String nnGender = nnPresentPast.get(translations.getOrDefault(nextWord, nextWord));
                             String bmGender = dictionary.get(nextWord)[3];
                             if(!Objects.equals(bmGender, nnGender)){
-                                switch (nnGender){
-                                    case "Masc":
-                                        word = "ein";
-                                        break;
-                                    case "Fem":
-                                        word = "ei";
-                                        break;
-                                    case "Neuter":
-                                        word = "eit";
-                                        break;
-                                }
+                                word = switch (nnGender) {
+                                    case "Masc" -> "ein";
+                                    case "Fem" -> "ei";
+                                    case "Neuter" -> "eit";
+                                    default -> word;
+                                };
                             }
                         }
-
                     }
                 }finalSentence.append(word);
 
             }else{
-
                 currentWord = translations.getOrDefault(word.toLowerCase(), word); // If there is a match, it will be translated. If not, it will stay the same.
 
                 if (capital) {
@@ -225,7 +217,7 @@ public class TranslationService {
         String gender = "na";
 
         // We loop through to find the noun. The noun is never more than a coule of positions away. By setting a limit, we ensure O(1) instead of O(n)
-        for(int n = wordIndex + 1; n < inputArray.length && n <= wordIndex + 4; n++){
+        for(int n = wordIndex + 1; n < inputArray.length && n <= wordIndex + 6; n++){
             nextWord = inputArray[n].toLowerCase();
             if(wordList.containsKey(nextWord)) {
                 if (!Objects.equals(wordList.get(nextWord)[3], "na")) {

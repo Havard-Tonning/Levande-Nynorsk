@@ -205,9 +205,9 @@ public class Train {
     public static void AppendBannedWords(){
         try (FileWriter writer = new FileWriter("src/main/java/preprocessing/translation.csv", true)) {
             String[] aWords = {"jeg", "også", "hun", "ham", "ikke", "de", "dere", "fra", "da", "en", "et", "hvor", "noen", "man", "dem", "kommer", "ble",
-                    "sendes", "hvorav", "verdenskrig", "verdenskrigen","Norge", "enten", "forsetter", "åringer"};
+                    "sendes", "hvorav", "verdenskrig", "verdenskrigen","Norge", "enten", "forsetter", "åringer", "fremgår"};
             String[] bWords = {"eg", "òg", "ho", "han", "ikkje", "dei", "dykk", "frå", "då", "ein", "eit", "kor", "nokon", "ein",
-                    "dei", "kjem", "vart", "sendast", "kor", "verdskrig", "verdskrigen","Noreg", "anten", "held fram", "åringar"};
+                    "dei", "kjem", "vart", "sendast", "kor", "verdskrig", "verdskrigen","Noreg", "anten", "held fram", "åringar", "går fram"};
 
             for(int i = 0; i < aWords.length; i++){
                 writer.append(aWords[i] + "," + bWords[i] + ",1\n");

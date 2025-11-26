@@ -65,7 +65,7 @@ public class TranslationService {
             boolean capital = isUpperCase(word.charAt(0));
 
             // Bokmål uses a synthetic passive, whereas Nynorsk uses periphrastic passive (hoppes in BM becomes vert hoppa in NN)
-            if (word.charAt(word.length() - 1) == 's' && !word.equals("les") && !word.equals("felles") && !word.equals("tross")) {
+            if (word.charAt(word.length() - 1) == 's' && !word.equals("les") && !word.equals("Les") && !word.equals("felles") && !word.equals("tross")) {
                 String core = word.substring(0, word.length() - 1);
                 if (dictionary.containsKey(core)) {
                     if (Objects.equals(dictionary.get(core)[2], "VERB")) {

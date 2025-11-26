@@ -13527,7 +13527,6 @@ avgassene,avgassane,1.0
 eiendomsforvalter,eigedomsforvaltar,1.0
 visesang,visesong,1.0
 boligstyling,bustadstyling,1.0
-fortsette,fram,0.7828418230563002
 omdreining,omdreiing,1.0
 byggetid,byggjetid,0.875
 skoletrivsel,skuletrivsel,1.0
@@ -16554,7 +16553,6 @@ prisøkningene,prisaukane,0.6666666666666666
 påtalemessig,avgjerd,1.0
 forlovede,trulova,0.7142857142857143
 valgkampløfte,valkampløfte,0.8571428571428571
-fortsetter,fram,0.6999675640609796
 røykere,røykjarar,0.7870370370370371
 legers,legar,0.5789473684210527
 lovsamlingen,lovsamlinga,1.0
@@ -35226,3 +35224,5 @@ verdenskrigen,verdskrigen,1
 Norge,Noreg,1
 enten,anten,1
 fremgår,går fram,1
+fortsetter,held fram,1
+fortsette,halde fram,

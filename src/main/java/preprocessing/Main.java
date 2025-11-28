@@ -10,9 +10,9 @@ public class Main {
 //       System.out.println("Loaded " + couples.size() + " pairs from TSV");
 //       Train.GenerateTranslation(couples);
 
-//        System.out.println(TranslationService.Translate(""));
+        System.out.println(TranslationService.Translate("Hen hoppes over."));
 
-        new TestAccuracy();
+//        new TestAccuracy();
 
 //        new CreateDict();
     }

@@ -1,6 +1,6 @@
-package com.tonning.translation.dto;
-
 // The text to be returned to the user. Automatically gets serialised to JSON by SpringBoot
+
+package com.tonning.translation.dto;
 
 public class TranslationResponse {
     private String translatedText;

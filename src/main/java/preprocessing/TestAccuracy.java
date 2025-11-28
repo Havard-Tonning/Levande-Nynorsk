@@ -1,3 +1,4 @@
+// For testing the accuracy of the translation
 package preprocessing;
 import com.tonning.translation.service.TranslationService;
 import java.util.ArrayList;
@@ -9,14 +10,12 @@ public class TestAccuracy {
         int hits = 0;
         int misses = 0;
         double average = 0;
-
         Scanner scanner = new Scanner(System.in);
 
-
+        // Using the corpus to check the translation versus the ideal version
         ArrayList<String[]> couples = Train.ReadTSV("src/main/java/preprocessing/npk_2011_2022.tsv");
 
-
-        for(int i = 600; i < couples.size() - 600; i++){
+        for(int i = 0; i < couples.size(); i++){
             String inputBokmaal = couples.get(i)[0];
             String idealNynorsk = couples.get(i)[1].trim();
             String myTranslation = TranslationService.Translate(couples.get(i)[0]).trim();
@@ -24,8 +23,8 @@ public class TestAccuracy {
             System.out.println("-----------------------------------------------------------------------");
             System.out.println("Bokmål: " + inputBokmaal);
             System.out.println("Translation: " + myTranslation);
-//            System.out.println("Ideal: " + idealNynorsk);
 
+            // If the translation is identical to the corpus, it is regarded as an automatic match. If not, it needs a manual validation
             if(myTranslation.equals(idealNynorsk)){
                 System.out.println("Automatic equals!");
                 hits++;
@@ -39,7 +38,6 @@ public class TestAccuracy {
             System.out.println("Misses: " + misses);
             System.out.println("Accuracy: " + average);
             System.out.println("-----------------------------------------------------------------------");
-
         }
     }
 }

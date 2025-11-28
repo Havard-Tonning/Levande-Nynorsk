@@ -1,5 +1,5 @@
+// Where the preprocessing happens. The algorithm gets trained on the corpus and saves the best translations
 package preprocessing;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -11,9 +11,8 @@ import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Train {
-
-    // The news articles are formatted as perfect TSV files, so no need for cleaning
     public static ArrayList<String[]> ReadTSV(String filePath){
+        // An arraylist containing the Bokmål-Nynorsk sentence pairs from the corpus
         ArrayList<String[]> pairs = new ArrayList<>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
@@ -34,19 +33,18 @@ public class Train {
                 }
             }
             return pairs;
-
-
             } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
+    // Function for training the algorithm on the corpus
     public static void GenerateTranslation(ArrayList<String[]> couples) {
-        /* The outerMap contains a word from the bokmål, plus a hashmap containing the words that the nynorsk side that it has appeared together with,
+        /*
+        The outerMap contains a word from the Bokmål, plus a hashmap containing the words that the Nynorsk side that it has appeared together with,
         as well as the number of connections it has with that specific word.
-        The appearance map contains all words from the bokmål side, and how many times they have appeared. This is used to calculate the frequency
+        The appearance map contains all words from the Bokmål side, and how many times they have appeared. This is used to calculate the frequency
          */
-
         HashMap<String, HashMap<String, Integer>> outerMap = new HashMap<>();
         HashMap<String, Integer> appearanceMap = new HashMap<String, Integer>();
 
@@ -59,7 +57,6 @@ public class Train {
                 "om", "blir", "at", "kjem", "eit", "inn", "norsk", "noreg",
                 "noregs", "norge", "fôr", "kan", "vil", "fortsetter", "forsette"
                 );
-
 
         String textHolder = "";
         String[] sentenceA = {};
@@ -80,12 +77,12 @@ public class Train {
 
             // Iterate though the elements of the "left hand" sentence
             for (String aWord : sentenceA) {
-                // Check to prevent common words to be checked unnecessarily
+                // Check to prevent common words being checked unnecessarily
                 if (bannedWords.contains(aWord)) {
                     continue;
                 }
 
-                // Arraylist to prevent a word from being added as a match twice, if it appears twice in the right hand side sentence
+                // Arraylist to prevent a word from being added as a match twice, if it appears twice in the right-hand-side sentence
                 ArrayList<String> addedWords = new ArrayList<String>();
 
                 // If the word already exists in the map, increase the number of occurrences it has, if not, create a mapping
@@ -126,17 +123,16 @@ public class Train {
                 }
             }
         }
-
         SaveTranslation(outerMap, appearanceMap);
     }
 
+    // For saving the translations to a CSV for quick access
     private static void SaveTranslation(HashMap<String, HashMap<String, Integer>> outerMap, HashMap<String, Integer> appearanceMap) {
         AtomicInteger lineCounter = new AtomicInteger();
         // Creating an arraylist of arrays. It will have the columns aWord, translation and probability
         ArrayList<String[]> translatedWords = new ArrayList<String[]>();
 
         try (FileWriter writer = new FileWriter("src/main/java/preprocessing/translation.csv", false)) {
-
             outerMap.forEach((aWord, matches) -> {
                 // Since lambda functions need effectively final data types, we get around this by using atomic integers and single element strings.
                 final AtomicInteger[] maxCount = {new AtomicInteger(0)};
@@ -145,6 +141,7 @@ public class Train {
                 final AtomicInteger[] secondMaxCount = {new AtomicInteger(0)};
                 final String[] secondBestTranslation = {""};
 
+                // Finds the best and second-best translation based on number of co-occurrences
                 matches.forEach((bWord, occurs) -> {
                     if (occurs > maxCount[0].get()) {
                         secondMaxCount[0].set(maxCount[0].get());
@@ -195,24 +192,24 @@ public class Train {
                     }
                 }
             });
-
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
         AppendBannedWords();
     }
 
+    // Function for adding words that are not covered by the automatic translation generation
     public static void AppendBannedWords(){
         try (FileWriter writer = new FileWriter("src/main/java/preprocessing/translation.csv", true)) {
             String[] aWords = {"jeg", "også", "hun", "ham", "ikke", "de", "dere", "fra", "da", "en", "et", "hvor", "noen", "man", "dem", "kommer", "ble",
                     "sendes", "hvorav", "verdenskrig", "verdenskrigen","Norge", "enten", "forsetter", "åringer", "fremgår", "fortsetter", "fortsette"};
+
             String[] bWords = {"eg", "òg", "ho", "han", "ikkje", "dei", "dykk", "frå", "då", "ein", "eit", "kor", "nokon", "ein",
                     "dei", "kjem", "vart", "sendast", "kor", "verdskrig", "verdskrigen","Noreg", "anten", "held fram", "åringar", "går fram", "held fram", "halde fram"};
 
             for(int i = 0; i < aWords.length; i++){
-                writer.append(aWords[i] + "," + bWords[i] + ",1\n");
+                writer.append(aWords[i]).append(",").append(bWords[i]).append(",1\n");
             }
-
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

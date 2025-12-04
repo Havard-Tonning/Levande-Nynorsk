@@ -80,6 +80,7 @@ public class TranslationService {
                             nnPeriphrastic = toUpperCase(nnPeriphrastic.charAt(0)) + nnPeriphrastic.substring(1);
                         }
 
+                        // If there is a verb proceeding the synthetic passive, the auxiliary verb takes a different form
                         boolean containsVerb = false;
                             for (int i = currentIndex -1; i > 0; i -= 1) {
                                 String testWord = inputArray[i];

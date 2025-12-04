@@ -10,7 +10,7 @@ public class Main {
 //       System.out.println("Loaded " + couples.size() + " pairs from TSV");
 //       Train.GenerateTranslation(couples);
 
-        System.out.println(TranslationService.Translate("Hen hoppes over."));
+        System.out.println(TranslationService.Translate("Dette må testes. Slik momsen trappes ned."));
 
 //        new TestAccuracy();
 
